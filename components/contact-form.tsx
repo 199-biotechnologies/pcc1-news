@@ -67,7 +67,7 @@ export function ContactForm() {
           {isSubmitted ? (
             <div className="text-center py-8">
               <h3 className="text-lg font-medium">Thanks for reaching out, {name}!</h3>
-              <p className="text-muted-foreground text-sm">We've received your message and will get back to you as soon as possible.</p>
+              <p className="text-muted-foreground text-sm">We&apos;ve received your message and will get back to you as soon as possible.</p>
             </div>
           ) : (
             // Use a React Fragment to group the form elements

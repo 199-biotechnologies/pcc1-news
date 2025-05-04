@@ -33,7 +33,7 @@ export default function Home() {
               </div>
               <div className="mx-auto lg:ml-auto">
                 <Image
-                  src="/placeholder.svg?key=wb9sb"
+                  src="/pcc1-molecule.svg"
                   alt="Procyanidin C1 Molecular Structure"
                   width={600}
                   height={400}

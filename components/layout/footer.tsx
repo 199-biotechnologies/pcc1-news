@@ -8,7 +8,7 @@ export function Footer() {
         <div className="flex flex-col gap-2 md:gap-3 md:w-1/3">
           <Link href="/" className="flex items-center gap-2">
             <Microscope className="h-4 w-4 text-teal-600" />
-            <span className="text-base font-light">Procyanidin Insights</span>
+            <span className="text-base font-light">PCC1.news</span>
           </Link>
           <p className="text-xs text-gray-500 font-light">
             Exploring the science of Procyanidin C1 and its effects on cellular aging.
@@ -47,7 +47,7 @@ export function Footer() {
       </div>
       <div className="border-t py-4 text-center text-xs text-gray-500 font-light">
         <div className="container px-4 md:px-6">
-          © {new Date().getFullYear()} Procyanidin Insights. All rights reserved.
+          © {new Date().getFullYear()} PCC1.news. All rights reserved.
         </div>
       </div>
     </footer>

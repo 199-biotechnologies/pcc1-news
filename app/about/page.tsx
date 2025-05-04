@@ -14,7 +14,7 @@ export default function AboutPage() {
                 <div className="inline-block rounded-lg bg-teal-100 px-3 py-1 text-xs text-teal-800 font-light">
                   About
                 </div>
-                <h1 className="text-3xl font-extralight tracking-tight sm:text-4xl">Procyanidin Insights</h1>
+                <h1 className="text-3xl font-extralight tracking-tight sm:text-4xl">PCC1.news</h1>
                 <p className="text-gray-500 text-sm md:text-base font-light">
                   A scientific blog dedicated to exploring the research and applications of Procyanidin C1, a powerful
                   senolytic complex.

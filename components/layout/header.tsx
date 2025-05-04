@@ -8,7 +8,7 @@ export function Header() {
       <div className="container flex h-14 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2">
           <Microscope className="h-5 w-5 text-teal-600" />
-          <span className="text-lg font-light tracking-wide">Procyanidin Insights</span>
+          <span className="text-lg font-light tracking-wide">PCC1.news</span>
         </Link>
         <nav className="hidden md:flex gap-6">
           <Link href="/" className="text-sm font-light hover:underline underline-offset-4">

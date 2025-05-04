@@ -20,6 +20,9 @@ export function Header() {
           <Link href="/research" className="text-sm font-light hover:underline underline-offset-4">
             Research
           </Link>
+<Link href="/science" className="text-sm font-light hover:underline underline-offset-4">
+            Science
+          </Link>
           <Link href="/shop" className="text-sm font-light hover:underline underline-offset-4">
             Shop
           </Link>

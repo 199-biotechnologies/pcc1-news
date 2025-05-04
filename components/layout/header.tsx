@@ -11,17 +11,18 @@ export function Header() {
           <span className="text-lg font-light tracking-wide">PCC1.news</span>
         </Link>
         <nav className="hidden md:flex gap-6">
+          {/* Reordered Links */}
           <Link href="/" className="text-sm font-light hover:underline underline-offset-4">
             Home
           </Link>
-          <Link href="/blog" className="text-sm font-light hover:underline underline-offset-4">
-            Blog
+          <Link href="/science" className="text-sm font-light hover:underline underline-offset-4">
+            Science
           </Link>
           <Link href="/research" className="text-sm font-light hover:underline underline-offset-4">
             Research
           </Link>
-<Link href="/science" className="text-sm font-light hover:underline underline-offset-4">
-            Science
+          <Link href="/blog" className="text-sm font-light hover:underline underline-offset-4">
+            Blog
           </Link>
           <Link href="/shop" className="text-sm font-light hover:underline underline-offset-4">
             Shop

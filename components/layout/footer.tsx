@@ -19,10 +19,11 @@ export function Footer() {
           <div className="space-y-2">
             <h4 className="text-sm font-light">Navigation</h4>
             <ul className="space-y-1 text-xs">
+              {/* Reordered Links */}
               <li><Link href="/" className="text-gray-500 hover:text-gray-900 font-light">Home</Link></li>
-              <li><Link href="/blog" className="text-gray-500 hover:text-gray-900 font-light">Blog</Link></li>
+              <li><Link href="/science" className="text-gray-500 hover:text-gray-900 font-light">Science</Link></li>
               <li><Link href="/research" className="text-gray-500 hover:text-gray-900 font-light">Research</Link></li>
-<li><Link href="/science" className="text-gray-500 hover:text-gray-900 font-light">Science</Link></li>
+              <li><Link href="/blog" className="text-gray-500 hover:text-gray-900 font-light">Blog</Link></li>
               <li><Link href="/shop" className="text-gray-500 hover:text-gray-900 font-light">Shop</Link></li>
             </ul>
           </div>

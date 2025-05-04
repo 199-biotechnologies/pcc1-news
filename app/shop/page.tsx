@@ -5,35 +5,7 @@ import { Microscope, Check, ShoppingCart, Minus, Plus } from "lucide-react"
 
 export default function ShopPage() {
   return (
-    <div className="flex flex-col min-h-screen">
-      <header className="border-b">
-        <div className="container flex h-14 items-center justify-between px-4 md:px-6">
-          <Link href="/" className="flex items-center gap-2">
-            <Microscope className="h-5 w-5 text-teal-600" />
-            <span className="text-lg font-light tracking-wide">Procyanidin Insights</span>
-          </Link>
-          <nav className="hidden md:flex gap-6">
-            <Link href="/" className="text-sm font-light hover:underline underline-offset-4">
-              Home
-            </Link>
-            <Link href="/blog" className="text-sm font-light hover:underline underline-offset-4">
-              Blog
-            </Link>
-            <Link href="/about" className="text-sm font-light hover:underline underline-offset-4">
-              About
-            </Link>
-            <Link href="/shop" className="text-sm font-light hover:underline underline-offset-4">
-              Shop
-            </Link>
-          </nav>
-          <Button variant="outline" size="sm" className="font-light" asChild>
-            <Link href="/shop">
-              <ShoppingCart className="h-4 w-4 mr-2" />
-              Shop
-            </Link>
-          </Button>
-        </div>
-      </header>
+    <>
       <main className="flex-1">
         <section className="w-full py-8 md:py-12 bg-gradient-to-b from-white to-gray-50">
           <div className="container px-4 md:px-6">
@@ -313,91 +285,6 @@ export default function ShopPage() {
           </div>
         </section>
       </main>
-      <footer className="border-t bg-white">
-        <div className="container flex flex-col gap-4 py-6 md:flex-row md:gap-6 px-4 md:px-6">
-          <div className="flex flex-col gap-2 md:gap-3 md:w-1/3">
-            <Link href="/" className="flex items-center gap-2">
-              <Microscope className="h-4 w-4 text-teal-600" />
-              <span className="text-base font-light">Procyanidin Insights</span>
-            </Link>
-            <p className="text-xs text-gray-500 font-light">
-              Exploring the science of Procyanidin C1 and its effects on cellular aging.
-            </p>
-          </div>
-          <div className="grid flex-1 grid-cols-2 gap-6 sm:grid-cols-3">
-            <div className="space-y-2">
-              <h4 className="text-sm font-light">Navigation</h4>
-              <ul className="space-y-1 text-xs">
-                <li>
-                  <Link href="/" className="text-gray-500 hover:text-gray-900 font-light">
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/blog" className="text-gray-500 hover:text-gray-900 font-light">
-                    Blog
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/about" className="text-gray-500 hover:text-gray-900 font-light">
-                    About
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/shop" className="text-gray-500 hover:text-gray-900 font-light">
-                    Shop
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div className="space-y-2">
-              <h4 className="text-sm font-light">Resources</h4>
-              <ul className="space-y-1 text-xs">
-                <li>
-                  <Link href="#" className="text-gray-500 hover:text-gray-900 font-light">
-                    Research Papers
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-gray-500 hover:text-gray-900 font-light">
-                    Publications
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-gray-500 hover:text-gray-900 font-light">
-                    Press
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div className="space-y-2">
-              <h4 className="text-sm font-light">Contact</h4>
-              <ul className="space-y-1 text-xs">
-                <li>
-                  <Link href="#" className="text-gray-500 hover:text-gray-900 font-light">
-                    Contact Us
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-gray-500 hover:text-gray-900 font-light">
-                    Support
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-gray-500 hover:text-gray-900 font-light">
-                    Returns
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div className="border-t py-4 text-center text-xs text-gray-500 font-light">
-          <div className="container px-4 md:px-6">
-            © {new Date().getFullYear()} Procyanidin Insights. All rights reserved.
-          </div>
-        </div>
-      </footer>
-    </div>
+    </>
   )
 }

@@ -5,38 +5,7 @@ import { Microscope, FileText, BookOpen, ShoppingCart } from "lucide-react"
 
 export default function AboutPage() {
   return (
-    <div className="flex flex-col min-h-screen">
-      <header className="border-b">
-        <div className="container flex h-14 items-center justify-between px-4 md:px-6">
-          <Link href="/" className="flex items-center gap-2">
-            <Microscope className="h-5 w-5 text-teal-600" />
-            <span className="text-lg font-light tracking-wide">Procyanidin Insights</span>
-          </Link>
-          <nav className="hidden md:flex gap-6">
-            <Link href="/" className="text-sm font-light hover:underline underline-offset-4">
-              Home
-            </Link>
-            <Link href="/blog" className="text-sm font-light hover:underline underline-offset-4">
-              Blog
-            </Link>
-            <Link href="/publications" className="text-sm font-light hover:underline underline-offset-4">
-              Publications
-            </Link>
-            <Link href="/about" className="text-sm font-light hover:underline underline-offset-4">
-              About
-            </Link>
-            <Link href="/shop" className="text-sm font-light hover:underline underline-offset-4">
-              Shop
-            </Link>
-          </nav>
-          <Button variant="outline" size="sm" className="font-light" asChild>
-            <Link href="/shop">
-              <ShoppingCart className="h-4 w-4 mr-2" />
-              Shop
-            </Link>
-          </Button>
-        </div>
-      </header>
+    <>
       <main className="flex-1">
         <section className="w-full py-8 md:py-12 bg-gradient-to-b from-white to-gray-50">
           <div className="container px-4 md:px-6">
@@ -231,3 +200,14 @@ export default function AboutPage() {
                   <p className="text-sm text-gray-500 font-light mb-3">{paper.description}</p>
                   <div className="flex items-center justify-between">
                     \
+
+</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </main>
+    </>
+  )
+}

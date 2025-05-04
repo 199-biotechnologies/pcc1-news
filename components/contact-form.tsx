@@ -111,7 +111,7 @@ export function ContactForm() {
               <div className="flex justify-center">
                  <HCaptcha
                    ref={captchaRef}
-                   sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2" // Default Web3Forms/hCaptcha free key
+                   sitekey={process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY!} // Use env variable
                    onVerify={(token) => setHcaptchaToken(token)}
                    onExpire={() => setHcaptchaToken(null)}
                    onError={() => toast.error("Captcha challenge failed. Please try again.")}

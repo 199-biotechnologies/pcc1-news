@@ -6,7 +6,7 @@ import { Mail, Microscope, Hospital, FlaskConical, Pill } from 'lucide-react'; /
 // Data for the 199 Group cards
 const groupEntities = [
   {
-    icon: Microscope,
+    icon: FlaskConical, // Swapped icon
     title: "199 Biotechnologies",
     description: "Working on partial reprogramming to tackle cellular aging and address diseases like glioblastoma.",
     url: "https://www.199.bio/"
@@ -18,7 +18,7 @@ const groupEntities = [
     url: "https://www.199.clinic/"
   },
   {
-    icon: FlaskConical,
+    icon: Microscope, // Swapped icon
     title: "199 Diagnostics",
     description: "Making advanced diagnostic technology accessible, measuring key aging markers like NAD metabolism and environmental toxins.",
     url: "https://www.agequant.com/"

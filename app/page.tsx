@@ -35,8 +35,8 @@ export default function Home() {
                 <Image
                   src="/pcc1-molecule.svg"
                   alt="Procyanidin C1 Molecular Structure"
-                  width={600}
-                  height={400}
+                  width={450}
+                  height={300}
                   className="rounded-lg object-cover"
                   priority
                 />

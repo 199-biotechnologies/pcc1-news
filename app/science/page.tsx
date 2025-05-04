@@ -1,11 +1,12 @@
 import { Metadata } from 'next';
 import Image from 'next/image'; // Import Next.js Image component
+import Link from "next/link"; // Keep Link for potential future use
+import { CheckCircle, HeartPulse, ShieldCheck, Activity, TrendingUp } from 'lucide-react'; // Import icons for benefits list
 
 export const metadata: Metadata = {
   title: "The Science of PCC1 | PCC1.news",
   description: "A comprehensive overview of the research, mechanisms, and potential of Procyanidin C1 (PCC1) in healthspan and longevity.",
 };
-import Link from "next/link"; // Keep Link for potential future use
 
 export default function SciencePage() {
   return (
@@ -22,9 +23,28 @@ export default function SciencePage() {
               <p className="text-gray-500 text-sm md:text-base font-light">
                 A comprehensive overview of the research, mechanisms, and potential of PCC1 in healthspan and longevity.
               </p>
-              {/* Add more introductory content or call-to-action if needed */}
             </div>
-{/* Key Lifespan Study Section */}
+          </div>
+        </section>
+
+        {/* Placeholder for Comprehensive Review Content & Intro */}
+        <section className="w-full py-12 md:py-16">
+          <div className="container px-4 md:px-6">
+            <article className="prose prose-lg prose-gray max-w-3xl mx-auto dark:prose-invert prose-p:font-light prose-headings:font-light">
+              <h2 className="text-2xl font-extralight tracking-tight sm:text-3xl">Comprehensive Review</h2>
+              {/* Intro Paragraph */}
+              <p>
+                The 2021 Nature Metabolism study showed that PCC1 was more effective than other senolytics in some contexts. Animals treated with PCC1 demonstrated significantly improved physical function and increased median lifespan. Most remarkably, when looking at mice that were already 24 months old (equivalent to a ~70-year-old human), their remaining lifespan was extended by over 60% compared to controls.
+              </p>
+              <p>
+                Further detailed scientific review content will be added here. This section will cover mechanisms of action, key studies, potential applications, and ongoing research related to PCC1.
+              </p>
+              {/* TODO: Add detailed content */}
+            </article>
+          </div>
+        </section>
+
+        {/* Key Lifespan Study Section */}
         <section className="w-full py-12 md:py-16 bg-gray-50">
           <div className="container px-4 md:px-6">
             <div className="max-w-4xl mx-auto space-y-8">
@@ -70,19 +90,38 @@ export default function SciencePage() {
             </div>
           </div>
         </section>
-          </div>
-        </section>
 
-        {/* Placeholder for Comprehensive Review Content */}
+        {/* Human-Relevant Research Section */}
         <section className="w-full py-12 md:py-16">
           <div className="container px-4 md:px-6">
-            <article className="prose prose-lg prose-gray max-w-3xl mx-auto dark:prose-invert prose-p:font-light prose-headings:font-light">
-              <h2 className="text-2xl font-extralight tracking-tight sm:text-3xl">Comprehensive Review</h2>
-              <p>
-                Detailed scientific review content will be added here. This section will cover mechanisms of action, key studies, potential applications, and ongoing research related to PCC1.
+            <div className="max-w-3xl mx-auto space-y-6">
+              <h2 className="text-2xl font-extralight tracking-tight sm:text-3xl text-center">Human-Relevant Research & Benefits</h2>
+              <p className="text-gray-500 text-sm md:text-base font-light text-center">
+                Unlike many experimental compounds, procyanidins have a long history of human consumption and safety. Research has demonstrated several concrete benefits of PCC1:
               </p>
-              {/* TODO: Add detailed content */}
-            </article>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <Activity className="h-5 w-5 text-teal-600 mt-1 flex-shrink-0" />
+                  <span className="text-sm text-gray-700 font-light">Improved physical function in aged animal models</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <HeartPulse className="h-5 w-5 text-teal-600 mt-1 flex-shrink-0" />
+                  <span className="text-sm text-gray-700 font-light">Enhanced cardiovascular parameters</span>
+                </li>
+                 <li className="flex items-start gap-3">
+                   <ShieldCheck className="h-5 w-5 text-teal-600 mt-1 flex-shrink-0" />
+                   <span className="text-sm text-gray-700 font-light">Reduced biomarkers of inflammation (IL-6, IL-8, TNF-α)</span>
+                 </li>
+                 <li className="flex items-start gap-3">
+                   <CheckCircle className="h-5 w-5 text-teal-600 mt-1 flex-shrink-0" />
+                   <span className="text-sm text-gray-700 font-light">Improved cellular stress resistance</span>
+                 </li>
+                 <li className="flex items-start gap-3">
+                   <TrendingUp className="h-5 w-5 text-teal-600 mt-1 flex-shrink-0" />
+                   <span className="text-sm text-gray-700 font-light">Extended lifespan in animal models by approximately 9-11%</span>
+                 </li>
+              </ul>
+            </div>
           </div>
         </section>
 

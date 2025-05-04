@@ -16,6 +16,7 @@ export function ContactForm() {
   const [message, setMessage] = useState("");
   const [hcaptchaToken, setHcaptchaToken] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false); // <-- Add state for submission status
   const captchaRef = useRef<HCaptcha>(null);
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -44,12 +45,8 @@ export function ContactForm() {
       }
 
       toast.success("Message sent successfully!", { id: loadingToastId });
-      // Reset form
-      setName("");
-      setEmail("");
-      setMessage("");
-      setHcaptchaToken(null);
-      captchaRef.current?.resetCaptcha(); // Reset hCaptcha widget
+      setIsSubmitted(true); // <-- Set submission status to true
+      // No need to reset fields anymore as the form will be hidden
     } catch (error) {
       console.error("Error submitting contact form:", error);
       toast.error("Error sending message. Please try again.", { id: loadingToastId });
@@ -65,58 +62,70 @@ export function ContactForm() {
       </CardHeader>
       <form onSubmit={handleSubmit}>
         <CardContent className="space-y-4">
-          <div className="space-y-2">
-            <Label htmlFor="name">Name</Label>
-            <Input
-              id="name"
-              type="text"
-              placeholder="Your Name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              required
-              disabled={isLoading}
-            />
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="email">Email</Label>
-            <Input
-              id="email"
-              type="email"
-              placeholder="your.email@example.com"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              disabled={isLoading}
-            />
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="message">Message</Label>
-            <Textarea
-              id="message"
-              placeholder="Your message..."
-              rows={4}
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              required
-              disabled={isLoading}
-            />
-          </div>
-          <div className="flex justify-center">
-             <HCaptcha
-               ref={captchaRef}
-               sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2" // Default Web3Forms/hCaptcha free key
-               onVerify={(token) => setHcaptchaToken(token)}
-               onExpire={() => setHcaptchaToken(null)}
-               onError={() => toast.error("Captcha challenge failed. Please try again.")}
-               reCaptchaCompat={false} // Important for hCaptcha
-             />
-          </div>
+          {isSubmitted ? (
+            <div className="text-center py-8">
+              <h3 className="text-lg font-medium">Thanks for reaching out, {name}!</h3>
+              <p className="text-muted-foreground text-sm">We've received your message and will get back to you as soon as possible.</p>
+            </div>
+          ) : (
+            // Use a React Fragment to group the form elements
+            <>
+              <div className="space-y-2">
+                <Label htmlFor="name">Name</Label>
+                <Input
+                  id="name"
+                  type="text"
+                  placeholder="Your Name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  required
+                  disabled={isLoading}
+                />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="email">Email</Label>
+                <Input
+                  id="email"
+                  type="email"
+                  placeholder="your.email@example.com"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                  disabled={isLoading}
+                />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="message">Message</Label>
+                <Textarea
+                  id="message"
+                  placeholder="Your message..."
+                  rows={4}
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  required
+                  disabled={isLoading}
+                />
+              </div>
+              <div className="flex justify-center">
+                 <HCaptcha
+                   ref={captchaRef}
+                   sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2" // Default Web3Forms/hCaptcha free key
+                   onVerify={(token) => setHcaptchaToken(token)}
+                   onExpire={() => setHcaptchaToken(null)}
+                   onError={() => toast.error("Captcha challenge failed. Please try again.")}
+                   reCaptchaCompat={false} // Important for hCaptcha
+                 />
+              </div>
+            </> // End of React Fragment for form elements
+          )}
         </CardContent>
-        <CardFooter>
-          <Button type="submit" className="w-full font-light" disabled={isLoading}>
-            {isLoading ? "Sending..." : "Send Message"}
-          </Button>
-        </CardFooter>
+        {!isSubmitted && ( // Conditionally render footer only if form is not submitted
+          <CardFooter>
+            <Button type="submit" className="w-full font-light" disabled={isLoading || !hcaptchaToken}>
+              {isLoading ? "Sending..." : "Send Message"}
+            </Button>
+          </CardFooter>
+        )}
       </form>
     </Card>
   );

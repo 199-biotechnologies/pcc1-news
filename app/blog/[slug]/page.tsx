@@ -92,7 +92,8 @@ export default async function PostPage({ params }: PostPageProps) {
             <section className="w-full py-8 md:py-12">
                 <div className="container px-4 md:px-6">
                     {/* Apply prose styles for markdown rendering */}
-                    <article className="prose prose-gray max-w-3xl mx-auto dark:prose-invert prose-p:text-sm prose-p:font-light prose-headings:font-light prose-h2:font-light prose-h2:text-2xl prose-h3:font-light prose-h3:text-xl prose-a:text-teal-600 hover:prose-a:text-teal-700 prose-strong:font-semibold prose-code:text-sm prose-code:before:content-none prose-code:after:content-none prose-code:bg-gray-100 prose-code:p-1 prose-code:rounded prose-pre:bg-gray-100 prose-pre:p-3 prose-pre:rounded">
+                    {/* Added prose-lg for better readability */}
+                    <article className="prose prose-lg prose-gray max-w-3xl mx-auto dark:prose-invert prose-p:font-light prose-headings:font-light prose-h2:font-light prose-h3:font-light prose-a:text-teal-600 hover:prose-a:text-teal-700 prose-strong:font-semibold prose-code:text-sm prose-code:before:content-none prose-code:after:content-none prose-code:bg-gray-100 prose-code:p-1 prose-code:rounded prose-pre:bg-gray-100 prose-pre:p-3 prose-pre:rounded">
                         <ReactMarkdown remarkPlugins={[remarkGfm]}>
                             {blogPost.content}
                         </ReactMarkdown>

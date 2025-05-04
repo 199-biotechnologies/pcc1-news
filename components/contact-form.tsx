@@ -57,9 +57,11 @@ export function ContactForm() {
 
   return (
     <Card className="w-full max-w-lg mx-auto">
-      <CardHeader>
-        <CardTitle className="text-xl font-light">Send us a message</CardTitle>
-      </CardHeader>
+      {!isSubmitted && ( // Only show header when form is visible
+        <CardHeader>
+          <CardTitle className="text-xl font-light">Send us a message</CardTitle>
+        </CardHeader>
+      )}
       <form onSubmit={handleSubmit}>
         <CardContent className="space-y-4">
           {isSubmitted ? (

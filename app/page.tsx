@@ -1,7 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Microscope, BookOpen, Users, ShoppingCart } from "lucide-react"
+import { ArrowRight, Microscope, BookOpen, Users } from "lucide-react"
 
 export default function Home() {
   return (
@@ -62,7 +62,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-lg font-light text-center">Senolytic Activity</h3>
                 <p className="text-sm text-gray-500 text-center font-light">
-                  Selectively eliminates senescent "zombie" cells while sparing healthy cells, reducing harmful
+                  Selectively eliminates senescent &quot;zombie&quot; cells while sparing healthy cells, reducing harmful
                   inflammatory compounds.
                 </p>
               </div>
@@ -155,7 +155,7 @@ export default function Home() {
               <div className="space-y-2">
                 <h2 className="text-2xl font-extralight tracking-tight sm:text-3xl">Recent Research</h2>
                 <p className="mx-auto max-w-[700px] text-gray-500 text-sm md:text-base font-light">
-                  The latest studies exploring Procyanidin C1's effects on aging and age-related conditions.
+                  The latest studies exploring Procyanidin C1&apos;s effects on aging and age-related conditions.
                 </p>
               </div>
             </div>
@@ -180,7 +180,7 @@ export default function Home() {
                   <div className="mb-3 text-xs text-gray-500 font-light">January 15, 2024</div>
                   <h3 className="mb-2 text-lg font-light">PCC1 Attenuates Pulmonary Fibrosis</h3>
                   <p className="mb-3 text-sm text-gray-500 font-light">
-                    FASEB Journal research demonstrates PCC1's ability to reduce pulmonary fibrosis by eliminating
+                    FASEB Journal research demonstrates PCC1&apos;s ability to reduce pulmonary fibrosis by eliminating
                     senescent cells.
                   </p>
                   <div className="flex items-center text-teal-600 text-sm group-hover:underline font-light">
@@ -194,7 +194,7 @@ export default function Home() {
                   <div className="mb-3 text-xs text-gray-500 font-light">December 10, 2021</div>
                   <h3 className="mb-2 text-lg font-light">Landmark Study: PCC1 Increases Lifespan in Mice</h3>
                   <p className="mb-3 text-sm text-gray-500 font-light">
-                    Nature Metabolism publication demonstrates PCC1's senotherapeutic activity and lifespan extension
+                    Nature Metabolism publication demonstrates PCC1&apos;s senotherapeutic activity and lifespan extension
                     effects.
                   </p>
                   <div className="flex items-center text-teal-600 text-sm group-hover:underline font-light">

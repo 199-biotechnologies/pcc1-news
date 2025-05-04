@@ -1,7 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Microscope, Check, ShoppingCart, Minus, Plus } from "lucide-react"
+import { Check, ShoppingCart, Minus, Plus } from "lucide-react"
 
 export default function ShopPage() {
   return (
@@ -157,7 +157,7 @@ export default function ShopPage() {
               <div className="rounded-lg border bg-white p-4 shadow-sm">
                 <h3 className="mb-2 text-lg font-light">Senolytic Activity</h3>
                 <p className="text-sm text-gray-500 font-light">
-                  PCC1 selectively eliminates senescent cells (aging "zombie" cells) through programmed cell death while
+                  PCC1 selectively eliminates senescent cells (aging &quot;zombie&quot; cells) through programmed cell death while
                   sparing healthy cells, helping to remove harmful cells that secrete inflammatory compounds.
                 </p>
               </div>

@@ -1,4 +1,3 @@
-import Link from "next/link"; // Added import for Link
 
 export default function TermsPage() {
   return (

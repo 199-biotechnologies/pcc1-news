@@ -127,23 +127,41 @@ export default function Home() {
                   </Button>
                 </div>
               </div>
-              <div className="space-y-3">
-                <Image
-                  src="/placeholder.svg?key=nka9f"
-                  alt="Lifespan Extension Data"
-                  width={500}
-                  height={300}
-                  className="mx-auto aspect-video overflow-hidden rounded-lg object-cover"
-                />
-                <p className="text-xs text-gray-500 text-center font-light">
-                  Fig 1: Survival curves of aged mice (24-27 months old) treated with PCC1 (blue) vs control (black),
-                  showing 64.2% longer median post-treatment lifespan.
-                </p>
-                <p className="text-sm text-gray-500 font-light">
-                  The 2021 Nature Metabolism study showed that PCC1 was more effective than other senolytics in some
-                  contexts. Most remarkably, when looking at mice that were already 24 months old (equivalent to a
-                  ~70-year-old human), their remaining lifespan was extended by over 60% compared to controls.
-                </p>
+              {/* Updated Right Column with Figures */}
+              <div className="space-y-6">
+                 {/* Figure A */}
+                 <div className="space-y-2">
+                    <Image
+                      src="/pcc1-figure-a.png"
+                      alt="Lifespan curve showing PCC1 vs control group"
+                      width={500}
+                      height={300} // Adjust height as needed based on image aspect ratio
+                      className="mx-auto overflow-hidden rounded-lg object-contain" // Use object-contain if aspect ratio differs
+                    />
+                    <p className="text-xs text-gray-500 text-center font-light">
+                      Fig 1a: Survival curves of aged mice (24-27 months old) treated with PCC1 or vehicle control. The blue line represents PCC1-treated mice and shows significantly improved survival compared to controls (black line).
+                    </p>
+                 </div>
+                 {/* Figure B */}
+                 <div className="space-y-2">
+                    <Image
+                      src="/pcc1-figure-b.png"
+                      alt="Mortality hazard graph for PCC1 treatment"
+                      width={500}
+                      height={300} // Adjust height as needed
+                      className="mx-auto overflow-hidden rounded-lg object-contain"
+                    />
+                    <p className="text-xs text-gray-500 text-center font-light">
+                      Fig 1b: Mortality hazard analysis showing 65% reduction in mortality risk with biweekly PCC1 administration compared to the control group.
+                    </p>
+                 </div>
+                 {/* Key Finding Text */}
+                 <div className="space-y-2 pt-2">
+                    <h3 className="text-lg font-light">Key Finding:</h3>
+                    <p className="text-sm text-gray-500 font-light">
+                      Mice receiving PCC1 administration (once every two weeks or biweekly) starting at 24–27 months of age (roughly equivalent to an age of 75–90 years in humans) had a 64.2% longer median post-treatment lifespan (or 9.4% longer overall lifespan) and lower mortality hazard (65.0%, P &lt; 0.0001) than the vehicle-treated group, as shown in the figures above.
+                    </p>
+                 </div>
               </div>
             </div>
           </div>

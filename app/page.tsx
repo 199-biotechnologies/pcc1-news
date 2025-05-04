@@ -62,7 +62,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-lg font-light text-center">Senolytic Activity</h3>
                 <p className="text-sm text-gray-500 text-center font-light">
-                  Selectively eliminates senescent &quot;zombie&quot; cells while sparing healthy cells, reducing harmful
+                  Selectively eliminates senescent "zombie" cells while sparing healthy cells, reducing harmful
                   inflammatory compounds.
                 </p>
               </div>
@@ -92,8 +92,9 @@ export default function Home() {
 
         <section className="w-full py-8 md:py-12 bg-gray-50">
           <div className="container px-4 md:px-6">
-            <div className="grid gap-8 px-6 md:gap-12 lg:grid-cols-2">
-              <div className="space-y-3">
+            {/* Adjusted grid to single column */}
+            <div className="grid gap-8 px-6 md:gap-12">
+              <div className="space-y-3 lg:col-span-1"> {/* Ensure it spans correctly */}
                 <div className="inline-block rounded-lg bg-teal-100 px-3 py-1 text-xs text-teal-800 font-light">
                   Key Research
                 </div>
@@ -127,42 +128,7 @@ export default function Home() {
                   </Button>
                 </div>
               </div>
-              {/* Updated Right Column with Figures */}
-              <div className="space-y-6">
-                 {/* Figure A */}
-                 <div className="space-y-2">
-                    <Image
-                      src="/pcc1-figure-a.png"
-                      alt="Lifespan curve showing PCC1 vs control group"
-                      width={500}
-                      height={300} // Adjust height as needed based on image aspect ratio
-                      className="mx-auto overflow-hidden rounded-lg object-contain" // Use object-contain if aspect ratio differs
-                    />
-                    <p className="text-xs text-gray-500 text-center font-light">
-                      Fig 1a: Survival curves of aged mice (24-27 months old) treated with PCC1 or vehicle control. The blue line represents PCC1-treated mice and shows significantly improved survival compared to controls (black line).
-                    </p>
-                 </div>
-                 {/* Figure B */}
-                 <div className="space-y-2">
-                    <Image
-                      src="/pcc1-figure-b.png"
-                      alt="Mortality hazard graph for PCC1 treatment"
-                      width={500}
-                      height={300} // Adjust height as needed
-                      className="mx-auto overflow-hidden rounded-lg object-contain"
-                    />
-                    <p className="text-xs text-gray-500 text-center font-light">
-                      Fig 1b: Mortality hazard analysis showing 65% reduction in mortality risk with biweekly PCC1 administration compared to the control group.
-                    </p>
-                 </div>
-                 {/* Key Finding Text */}
-                 <div className="space-y-2 pt-2">
-                    <h3 className="text-lg font-light">Key Finding:</h3>
-                    <p className="text-sm text-gray-500 font-light">
-                      Mice receiving PCC1 administration (once every two weeks or biweekly) starting at 24–27 months of age (roughly equivalent to an age of 75–90 years in humans) had a 64.2% longer median post-treatment lifespan (or 9.4% longer overall lifespan) and lower mortality hazard (65.0%, P &lt; 0.0001) than the vehicle-treated group, as shown in the figures above.
-                    </p>
-                 </div>
-              </div>
+              {/* Right column removed - content moved to /science page */}
             </div>
           </div>
         </section>
@@ -173,7 +139,7 @@ export default function Home() {
               <div className="space-y-2">
                 <h2 className="text-2xl font-extralight tracking-tight sm:text-3xl">Recent Research</h2>
                 <p className="mx-auto max-w-[700px] text-gray-500 text-sm md:text-base font-light">
-                  The latest studies exploring Procyanidin C1&apos;s effects on aging and age-related conditions.
+                  The latest studies exploring Procyanidin C1's effects on aging and age-related conditions.
                 </p>
               </div>
             </div>
@@ -198,7 +164,7 @@ export default function Home() {
                   <div className="mb-3 text-xs text-gray-500 font-light">January 15, 2024</div>
                   <h3 className="mb-2 text-lg font-light">PCC1 Attenuates Pulmonary Fibrosis</h3>
                   <p className="mb-3 text-sm text-gray-500 font-light">
-                    FASEB Journal research demonstrates PCC1&apos;s ability to reduce pulmonary fibrosis by eliminating
+                    FASEB Journal research demonstrates PCC1's ability to reduce pulmonary fibrosis by eliminating
                     senescent cells.
                   </p>
                   <div className="flex items-center text-teal-600 text-sm group-hover:underline font-light">
@@ -212,7 +178,7 @@ export default function Home() {
                   <div className="mb-3 text-xs text-gray-500 font-light">December 10, 2021</div>
                   <h3 className="mb-2 text-lg font-light">Landmark Study: PCC1 Increases Lifespan in Mice</h3>
                   <p className="mb-3 text-sm text-gray-500 font-light">
-                    Nature Metabolism publication demonstrates PCC1&apos;s senotherapeutic activity and lifespan extension
+                    Nature Metabolism publication demonstrates PCC1's senotherapeutic activity and lifespan extension
                     effects.
                   </p>
                   <div className="flex items-center text-teal-600 text-sm group-hover:underline font-light">

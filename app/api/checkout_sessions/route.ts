@@ -25,6 +25,9 @@ export async function POST(request: Request) {
       mode: 'payment', // Use 'payment' for one-time purchases
       success_url: `${origin}/shop/success?session_id={CHECKOUT_SESSION_ID}`, // Redirect URL on success
       cancel_url: `${origin}/shop?canceled=true`, // Redirect URL on cancellation
+      shipping_address_collection: {
+        allowed_countries: ['US', 'CA', 'GB', 'AU'], // Specify allowed countries (Example: US, CA, GB, AU) - Adjust as needed!
+      },
       automatic_tax: { enabled: true }, // Optional: enable automatic tax calculation
     });
 

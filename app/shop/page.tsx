@@ -25,8 +25,8 @@ function formatCurrency(amount: number | null, currency: string | null): string 
 
 // Fetch product and price data from Stripe
 async function getProductData() {
-  const productId = 'prod_SFg1f5l2ktoWHM'; // Your Product ID
-  const priceId = 'price_1RLAfiRC0WRINzjAAXOIvhth'; // Your Price ID
+  const productId = 'prod_SFtP7VXSpwhZcG'; // Updated Live Product ID
+  const priceId = 'price_1RLNcfIXR6Q95AMXx9UpgE2i'; // Updated Live Price ID
 
   try {
     // Fetch product and price details concurrently

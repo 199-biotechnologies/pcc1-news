@@ -9,7 +9,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
 });
 
 export async function POST(request: Request) {
-  const priceId = 'price_1RLAfiRC0WRINzjAAXOIvhth'; // The Price ID you provided
+  const priceId = 'price_1RLNcfIXR6Q95AMXx9UpgE2i'; // Updated Live Price ID
   const origin = request.headers.get('origin') || 'http://localhost:3000'; // Default for local dev
 
   try {

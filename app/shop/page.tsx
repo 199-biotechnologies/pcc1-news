@@ -107,18 +107,7 @@ export default async function ShopPage() {
                     priority // Load main image faster
                   />
                 </div>
-                {/* Optional: Add more images from product.images if needed */}
-                <div className="grid grid-cols-3 gap-2">
-                   <div className="overflow-hidden rounded-lg border bg-white">
-                     <Image src={product.images?.[1] || "/placeholder.svg?key=1"} alt="Product Detail 1" width={150} height={150} className="aspect-square object-cover w-full" />
-                   </div>
-                   <div className="overflow-hidden rounded-lg border bg-white">
-                     <Image src={product.images?.[2] || "/placeholder.svg?key=2"} alt="Product Detail 2" width={150} height={150} className="aspect-square object-cover w-full" />
-                   </div>
-                   <div className="overflow-hidden rounded-lg border bg-white">
-                     <Image src={product.images?.[3] || "/placeholder.svg?key=3"} alt="Product Detail 3" width={150} height={150} className="aspect-square object-cover w-full" />
-                   </div>
-                 </div>
+                {/* Removed the grid of 3 small thumbnail images */}
               </div>
 
               {/* Product Info & Checkout Button - Render the client component */}

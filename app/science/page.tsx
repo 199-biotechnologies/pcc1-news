@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from "next/link";
-import { CheckCircle, HeartPulse, ShieldCheck, Activity, TrendingUp, Microscope, Leaf, Flask, Target } from 'lucide-react';
+import { CheckCircle, HeartPulse, ShieldCheck, Activity, TrendingUp, Microscope, Leaf, Beaker, Target } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: "The Science of PCC1 | PCC1.news",
@@ -97,7 +97,7 @@ export default function SciencePage() {
                 
                 <div className="bg-white p-4 rounded-lg shadow-sm border">
                   <div className="flex items-center justify-center w-10 h-10 rounded-full bg-orange-100 text-orange-800 mb-3 mx-auto">
-                    <Flask className="h-5 w-5" />
+                    <Beaker className="h-5 w-5" />
                   </div>
                   <h3 className="text-lg font-light text-center">Mitochondrial Pathway</h3>
                   <p className="text-sm text-gray-500 text-center font-light">

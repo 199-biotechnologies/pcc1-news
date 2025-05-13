@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Calendar, User } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import { PageContainer, Section } from "@/components/layout/page-container";
+import { PageContainer, Section, PageHeader } from "@/components/layout/page-container";
 
 // Define the type for a full blog post
 interface BlogPost {
@@ -65,23 +65,25 @@ export default async function PostPage({ params }: PostPageProps) {
     return (
         <PageContainer>
             <Section background="gradient">
-                <div className="max-w-3xl mx-auto space-y-3 text-center">
-                    <h1 className="text-3xl font-extralight tracking-tight sm:text-4xl md:text-5xl">{blogPost.title}</h1>
-                    <div className="flex justify-center items-center gap-4 text-xs text-gray-500 font-light">
-                        {blogPost.published_at && (
-                            <div className="flex items-center gap-1">
-                                <Calendar className="h-3 w-3" />
-                                <span>Published on {formatDate(blogPost.published_at)}</span>
-                            </div>
-                        )}
-                        {blogPost.author && (
-                            <div className="flex items-center gap-1">
-                                <User className="h-3 w-3" />
-                                <span>By {blogPost.author}</span>
-                            </div>
-                        )}
-                    </div>
-                </div>
+                <PageHeader
+                    title={blogPost.title}
+                    description={
+                        <div className="flex justify-center items-center gap-4 text-xs text-gray-500 font-light">
+                            {blogPost.published_at && (
+                                <div className="flex items-center gap-1">
+                                    <Calendar className="h-3 w-3" />
+                                    <span>Published on {formatDate(blogPost.published_at)}</span>
+                                </div>
+                            )}
+                            {blogPost.author && (
+                                <div className="flex items-center gap-1">
+                                    <User className="h-3 w-3" />
+                                    <span>By {blogPost.author}</span>
+                                </div>
+                            )}
+                        </div>
+                    }
+                />
             </Section>
 
             <Section>

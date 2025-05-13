@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from "next/link";
 import { CheckCircle, HeartPulse, ShieldCheck, Activity, TrendingUp, Microscope, Leaf, Beaker, Target } from 'lucide-react';
+import { PageContainer, Section, PageHeader } from "@/components/layout/page-container";
 
 export const metadata: Metadata = {
   title: "The Science of PCC1 | PCC1.news",
@@ -10,26 +11,18 @@ export const metadata: Metadata = {
 
 export default function SciencePage() {
   return (
-    <>
-      <main className="flex-1">
-        {/* Hero Section */}
-        <section className="w-full py-12 md:py-16 bg-gradient-to-b from-white to-gray-50">
-          <div className="container px-4 md:px-6 text-center">
-            <div className="max-w-3xl mx-auto space-y-3">
-              <div className="inline-block rounded-lg bg-teal-100 px-3 py-1 text-xs text-teal-800 font-light">
-                Science
-              </div>
-              <h1 className="text-3xl font-extralight tracking-tight sm:text-4xl">The Science of Procyanidin C1 (PCC1)</h1>
-              <p className="text-gray-500 text-sm md:text-base font-light">
-                A comprehensive overview of the research, mechanisms, and potential of PCC1 in healthspan and longevity.
-              </p>
-            </div>
-          </div>
-        </section>
+    <PageContainer>
+      {/* Hero Section */}
+      <Section background="gradient" className="py-12 md:py-16">
+        <PageHeader
+          title="The Science of Procyanidin C1 (PCC1)"
+          description="A comprehensive overview of the research, mechanisms, and potential of PCC1 in healthspan and longevity."
+          tag="Science"
+        />
+      </Section>
 
         {/* What is PCC1 Section */}
-        <section className="w-full py-12 md:py-16">
-          <div className="container px-4 md:px-6">
+        <Section className="py-12 md:py-16">
             <article className="prose prose-lg prose-gray max-w-3xl mx-auto dark:prose-invert prose-p:font-light prose-headings:font-light">
               <h2 className="text-2xl font-extralight tracking-tight sm:text-3xl">What is Procyanidin C1?</h2>
               <p>
@@ -72,12 +65,10 @@ export default function SciencePage() {
                 This dual functionality gives PCC1 an advantage over many other senotherapeutic compounds that typically only target one of these pathways. The ability to both modify and eliminate senescent cells allows for a more comprehensive approach to addressing age-related cellular damage.
               </p>
             </article>
-          </div>
-        </section>
+        </Section>
 
         {/* Molecular Mechanisms Section */}
-        <section className="w-full py-12 md:py-16 bg-gray-50">
-          <div className="container px-4 md:px-6">
+        <Section background="light" className="py-12 md:py-16">
             <div className="max-w-3xl mx-auto space-y-6">
               <h2 className="text-2xl font-extralight tracking-tight sm:text-3xl text-center">Molecular Mechanisms</h2>
               <p className="text-gray-500 text-sm md:text-base font-light text-center">
@@ -154,12 +145,10 @@ export default function SciencePage() {
                 </p>
               </div>
             </div>
-          </div>
-        </section>
+        </Section>
 
         {/* Key Lifespan Study Section */}
-        <section className="w-full py-12 md:py-16">
-          <div className="container px-4 md:px-6">
+        <Section className="py-12 md:py-16">
             <div className="max-w-4xl mx-auto space-y-8">
               <h2 className="text-2xl font-extralight tracking-tight sm:text-3xl text-center">Key Lifespan Extension Study</h2>
 
@@ -204,12 +193,10 @@ export default function SciencePage() {
                 </p>
               </div>
             </div>
-          </div>
-        </section>
+        </Section>
 
         {/* Tissue-Specific Effects Section */}
-        <section className="w-full py-12 md:py-16 bg-gray-50">
-          <div className="container px-4 md:px-6">
+        <Section background="light" className="py-12 md:py-16">
             <div className="max-w-3xl mx-auto space-y-6">
               <h2 className="text-2xl font-extralight tracking-tight sm:text-3xl text-center">Tissue-Specific Rejuvenation</h2>
               <p className="text-gray-500 text-sm md:text-base font-light text-center">
@@ -285,12 +272,10 @@ export default function SciencePage() {
                 </ul>
               </div>
             </div>
-          </div>
-        </section>
+        </Section>
 
         {/* Human-Relevant Research Section */}
-        <section className="w-full py-12 md:py-16">
-          <div className="container px-4 md:px-6">
+        <Section className="py-12 md:py-16">
             <div className="max-w-3xl mx-auto space-y-6">
               <h2 className="text-2xl font-extralight tracking-tight sm:text-3xl text-center">Human-Relevant Research & Bioavailability</h2>
               <p className="text-gray-500 text-sm md:text-base font-light text-center">
@@ -352,12 +337,10 @@ export default function SciencePage() {
                 </ul>
               </div>
             </div>
-          </div>
-        </section>
+        </Section>
 
         {/* Future Research Section */}
-        <section className="w-full py-12 md:py-16 bg-gray-50">
-          <div className="container px-4 md:px-6">
+        <Section background="light" className="py-12 md:py-16">
             <div className="max-w-3xl mx-auto space-y-6">
               <h2 className="text-2xl font-extralight tracking-tight sm:text-3xl text-center">Future Research Directions</h2>
               <p className="text-gray-500 text-sm md:text-base font-light text-center">
@@ -387,10 +370,8 @@ export default function SciencePage() {
                 </p>
               </div>
             </div>
-          </div>
-        </section>
+        </Section>
 
-      </main>
-    </>
+    </PageContainer>
   )
 }

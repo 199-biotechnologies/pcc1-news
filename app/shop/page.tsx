@@ -59,6 +59,9 @@ export default async function ShopPage() {
       </PageContainer>
     );
   }
+  
+  // Override product name since Stripe is not configured
+  product.name = "Procyanidin Complex";
 
   // Prepare data for display - hardcode price since Stripe is not configured
   const formattedPrice = "$129.00";
@@ -82,13 +85,13 @@ export default async function ShopPage() {
         <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-start">
           {/* Image Gallery - Uses dynamic image */}
           <div className="space-y-4">
-            <div className="overflow-hidden rounded-lg border bg-white">
+            <div className="relative overflow-hidden rounded-lg border bg-white">
               <Image
                 src={product.images?.[0] || "/placeholder.svg"} // Use first image from Stripe or fallback
                 alt={product.name || "Product Image"}
-                width={500}
-                height={500}
-                className="aspect-square object-cover w-full"
+                width={600}
+                height={600}
+                className="w-full h-auto object-contain"
                 priority // Load main image faster
               />
             </div>
@@ -162,8 +165,8 @@ export default async function ShopPage() {
             <div className="rounded-lg border bg-white p-4">
               <h3 className="text-lg font-light">What is {product.name}?</h3>
               <p className="mt-1 text-sm text-gray-600 font-light">
-                {product.name} is a specific type of compound identified in research.
-                Our formula contains a highly purified form.
+                {product.name} is a proprietary blend containing Procyanidin C1 (PCC1), a powerful senolytic compound identified in research.
+                Our formula delivers a highly purified form in convenient sachets.
               </p>
             </div>
             <div className="rounded-lg border bg-white p-4">
@@ -176,7 +179,7 @@ export default async function ShopPage() {
             <div className="rounded-lg border bg-white p-4">
               <h3 className="text-lg font-light">What is the recommended dosage?</h3>
               <p className="mt-1 text-sm text-gray-600 font-light">
-                The recommended dosage is typically 1-2 capsules daily, preferably with a meal. Each bottle contains a 30-day supply.
+                Each box contains 3 sachets with 3 capsules each. Follow the dosage instructions provided or consult with your healthcare provider.
               </p>
             </div>
             {/* Add other FAQs */}

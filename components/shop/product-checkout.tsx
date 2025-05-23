@@ -44,7 +44,7 @@ export default function ProductCheckout({
         <div className="mt-2 flex items-center">
           {/* Use dynamic formatted price */}
           <div className="text-2xl font-light">{formattedPrice}</div>
-          <div className="ml-2 text-sm text-gray-600 font-light">per bottle</div>
+          <div className="ml-2 text-sm text-gray-600 font-light">per box</div>
         </div>
       </div>
       <div className="space-y-2">
@@ -58,7 +58,7 @@ export default function ProductCheckout({
         {/* Updated features */}
         <div className="flex items-center gap-2">
           <Check className="h-4 w-4 text-teal-600" />
-          <span className="text-sm font-light">9 capsules per bottle</span>
+          <span className="text-sm font-light">3 sachets × 3 capsules (9 capsules total)</span>
         </div>
         <div className="flex items-center gap-2">
           <Check className="h-4 w-4 text-teal-600" />

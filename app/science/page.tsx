@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
-import { CheckCircle, HeartPulse, ShieldCheck, Activity, TrendingUp, Microscope, Leaf, Beaker, Target } from 'lucide-react';
+import { CheckCircle, HeartPulse, ShieldCheck, Activity, TrendingUp, Microscope, Leaf, Beaker, Target, Grape, Apple, Sprout, Coffee, Bean } from 'lucide-react';
 import { PageContainer, Section, PageHeader } from "@/components/layout/page-container";
 
 export const metadata: Metadata = {
@@ -28,15 +28,32 @@ export default function SciencePage() {
                 Procyanidin C1 (PCC1) is a natural polyphenolic compound classified as a B-type proanthocyanidin. It's specifically a trimer consisting of three epicatechin molecules linked together (epicatechin-(4β-8)-epicatechin-(4β-8)-epicatechin). As a member of the flavonoid superfamily, PCC1 has a complex molecular structure (C<sub>45</sub>H<sub>38</sub>O<sub>18</sub>) that contributes to its unique biological properties.
               </p>
               <p>
-                PCC1 is found naturally in several plant sources, including:
+                PCC1 is found naturally in several plant sources:
               </p>
-              <ul>
-                <li>Grape seeds and grape seed extract (GSE)</li>
-                <li>Unripe apples</li>
-                <li>Cinnamon</li>
-                <li>Cocoa beans</li>
-                <li>Black soybean seed coats</li>
-              </ul>
+              
+              {/* Natural Sources Cards */}
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 my-6">
+                <div className="bg-white border rounded-lg p-4 text-center hover:shadow-md transition-shadow">
+                  <Grape className="h-8 w-8 text-purple-600 mx-auto mb-2" />
+                  <p className="text-sm font-light">Grape Seeds & GSE</p>
+                </div>
+                <div className="bg-white border rounded-lg p-4 text-center hover:shadow-md transition-shadow">
+                  <Apple className="h-8 w-8 text-green-600 mx-auto mb-2" />
+                  <p className="text-sm font-light">Unripe Apples</p>
+                </div>
+                <div className="bg-white border rounded-lg p-4 text-center hover:shadow-md transition-shadow">
+                  <Sprout className="h-8 w-8 text-amber-700 mx-auto mb-2" />
+                  <p className="text-sm font-light">Cinnamon</p>
+                </div>
+                <div className="bg-white border rounded-lg p-4 text-center hover:shadow-md transition-shadow">
+                  <Coffee className="h-8 w-8 text-amber-900 mx-auto mb-2" />
+                  <p className="text-sm font-light">Cocoa Beans</p>
+                </div>
+                <div className="bg-white border rounded-lg p-4 text-center hover:shadow-md transition-shadow">
+                  <Bean className="h-8 w-8 text-gray-800 mx-auto mb-2" />
+                  <p className="text-sm font-light">Black Soybean</p>
+                </div>
+              </div>
               <p>
                 While procyanidins in general have been studied for their antioxidant properties, PCC1 has emerged as particularly noteworthy for its powerful effects on senescent cells and potential impact on aging processes.
               </p>

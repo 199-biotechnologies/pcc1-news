@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Microscope } from "lucide-react"
+import { Microscope, Twitter, Instagram } from "lucide-react"
 
 export function Footer() {
   return (
@@ -13,6 +13,19 @@ export function Footer() {
           <p className="text-xs text-gray-500 font-light">
             Exploring the science of Procyanidin C1 and its effects on cellular aging.
           </p>
+          <p className="text-xs text-gray-400 font-light mt-2">
+            A research initiative by <Link href="https://199biotechnologies.com" className="text-teal-600 hover:text-teal-700">199 Biotechnologies</Link>
+          </p>
+          <div className="flex gap-3 mt-3">
+            <Link href="https://x.com/199longevity" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gray-600">
+              <Twitter className="h-4 w-4" />
+              <span className="sr-only">X (Twitter)</span>
+            </Link>
+            <Link href="https://www.instagram.com/longevity.boris/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gray-600">
+              <Instagram className="h-4 w-4" />
+              <span className="sr-only">Instagram</span>
+            </Link>
+          </div>
         </div>
         <div className="grid flex-1 grid-cols-2 gap-6 sm:grid-cols-3">
           {/* Navigation Column */}
@@ -49,7 +62,7 @@ export function Footer() {
       </div>
       <div className="border-t py-4 text-center text-xs text-gray-500 font-light">
         <div className="container max-w-7xl mx-auto px-4 md:px-6">
-          © {new Date().getFullYear()} PCC1.news. All rights reserved.
+          © {new Date().getFullYear()} 199 Biotechnologies. All rights reserved.
         </div>
       </div>
     </footer>

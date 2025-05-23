@@ -11,13 +11,13 @@ export default function Home() {
         <div className="grid gap-6 lg:grid-cols-2 lg:gap-10 items-center">
           <div className="space-y-3">
             <div className="inline-block rounded-lg bg-teal-100 px-3 py-1 text-xs text-teal-800 font-light">
-              Scientific Research
+              Scientific Research Hub
             </div>
             <h1 className="text-3xl font-extralight tracking-tight sm:text-4xl md:text-5xl">
-              Unlocking the Power of Procyanidin C1
+              The Definitive Source for Procyanidin C1 Research
             </h1>
             <p className="text-gray-600 md:text-lg/relaxed font-light">
-              Exploring the senolytic complex that extends lifespan and combats cellular aging.
+              Advancing the science of polyphenol senolytics through rigorous research and discovery.
             </p>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
               <Button size="sm" className="font-light" asChild>
@@ -189,9 +189,9 @@ export default function Home() {
       <Section id="subscribe" background="light">
         <div className="flex flex-col items-center justify-center space-y-3 text-center">
           <div className="space-y-2">
-            <h2 className="text-2xl font-extralight tracking-tight sm:text-3xl">Subscribe</h2>
+            <h2 className="text-2xl font-extralight tracking-tight sm:text-3xl">Join the Research Community</h2>
             <p className="mx-auto max-w-[500px] text-gray-600 text-sm md:text-base font-light">
-              Stay updated with the latest research and insights on Procyanidin C1.
+              Stay informed with breakthrough discoveries in polyphenol research from 199 Biotechnologies.
             </p>
           </div>
           <div className="w-full max-w-md space-y-2">

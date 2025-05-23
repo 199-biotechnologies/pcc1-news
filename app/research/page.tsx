@@ -1,8 +1,9 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, FileText, ExternalLink, ShoppingCart } from "lucide-react"
+import { ArrowRight, ShoppingCart } from "lucide-react"
 import { supabase } from "@/lib/supabaseClient"
 import { PageContainer, Section, PageHeader } from "@/components/layout/page-container"
+import ResearchPapersList from "@/components/research/research-papers-list"
 
 // Define the type for a research paper based on the Supabase table
 interface ResearchPaper {
@@ -44,43 +45,8 @@ export default async function ResearchPage() {
       </Section>
 
       <Section>
-        <div className="mx-auto max-w-4xl space-y-8">
-          {/* Map over fetched papers */}
-          {researchPapers.length > 0 ? (
-            researchPapers.map((paper) => (
-              <div key={paper.id} className="border-b pb-6 last:border-0">
-                <div className="flex items-start gap-3">
-                  <FileText className="h-5 w-5 text-teal-600 mt-1 flex-shrink-0" />
-                  <div className="space-y-2">
-                    <h2 className="text-xl font-light">{paper.title}</h2>
-                    {paper.authors && <p className="text-sm text-gray-600 font-light">{paper.authors}</p>}
-                    <p className="text-sm font-light">
-                      {paper.journal && <span className="italic">{paper.journal}</span>}
-                      {paper.year && `, ${paper.year}`}
-                      {paper.volume && `, ${paper.volume}`}
-                      {paper.pages && `, ${paper.pages}`}
-                    </p>
-                    {paper.description && <p className="text-sm text-gray-600 font-light">{paper.description}</p>}
-                    {paper.doi && (
-                      <div className="flex items-center justify-between pt-2">
-                        <p className="text-sm text-gray-600 font-light">DOI: {paper.doi}</p>
-                        <Link
-                          href={`https://doi.org/${paper.doi}`}
-                          className="text-teal-600 text-sm font-light hover:underline flex items-center"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          View Publication <ExternalLink className="ml-1 h-3 w-3" />
-                        </Link>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </div>
-            ))
-          ) : (
-            <p className="text-center text-gray-600">No research papers found.</p>
-          )}
+        <div className="mx-auto max-w-4xl">
+          <ResearchPapersList papers={researchPapers} />
         </div>
       </Section>
 

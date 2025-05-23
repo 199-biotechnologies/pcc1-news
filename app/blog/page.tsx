@@ -84,7 +84,7 @@ export default async function BlogPage() {
                   className="rounded-lg object-cover aspect-[16/9]"
                 />
                 <div className="space-y-2">
-                  <div className="flex items-center gap-2 text-xs text-gray-500 font-light">
+                  <div className="flex items-center gap-2 text-xs text-gray-600 font-light">
                     {post.published_at && (
                       <div className="flex items-center gap-1">
                         <Calendar className="h-3 w-3" />
@@ -93,15 +93,15 @@ export default async function BlogPage() {
                     )}
                   </div>
                   <h2 className="text-lg font-light group-hover:text-teal-600 transition-colors">{post.title}</h2>
-                  {post.excerpt && <p className="text-sm text-gray-500 font-light line-clamp-2">{post.excerpt}</p>}
+                  {post.excerpt && <p className="text-sm text-gray-600 font-light line-clamp-2">{post.excerpt}</p>}
                   <div className="flex items-center justify-between">
                     {post.author && (
-                      <div className="flex items-center gap-1 text-xs text-gray-500 font-light">
+                      <div className="flex items-center gap-1 text-xs text-gray-600 font-light">
                         <User className="h-3 w-3" />
                         <span>{post.author}</span>
                       </div>
                     )}
-                    {post.doi && <div className="text-xs text-gray-500 font-light">DOI: {post.doi}</div>}
+                    {post.doi && <div className="text-xs text-gray-600 font-light">DOI: {post.doi}</div>}
                   </div>
                   <div className="flex items-center text-teal-600 text-sm group-hover:underline font-light">
                     Read more <ArrowRight className="ml-1 h-3 w-3" />
@@ -110,7 +110,7 @@ export default async function BlogPage() {
               </article>
             ))
           ) : (
-             <p className="text-center text-gray-500 col-span-full">No blog posts found.</p>
+             <p className="text-center text-gray-600 col-span-full">No blog posts found.</p>
           )}
         </div>
       </Section>
@@ -120,7 +120,7 @@ export default async function BlogPage() {
         <div className="flex flex-col items-center justify-center space-y-3 text-center">
           <div className="space-y-2">
             <h2 className="text-2xl font-extralight tracking-tight sm:text-3xl">Subscribe</h2>
-            <p className="mx-auto max-w-[500px] text-gray-500 text-sm md:text-base font-light">
+            <p className="mx-auto max-w-[500px] text-gray-600 text-sm md:text-base font-light">
               Stay updated with the latest research and insights on Procyanidin C1.
             </p>
           </div>
@@ -135,7 +135,7 @@ export default async function BlogPage() {
                 Subscribe
               </Button>
             </form>
-            <p className="text-xs text-gray-500 font-light">We respect your privacy. Unsubscribe at any time.</p>
+            <p className="text-xs text-gray-600 font-light">We respect your privacy. Unsubscribe at any time.</p>
           </div>
         </div>
       </Section>

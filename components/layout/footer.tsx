@@ -4,7 +4,7 @@ import { Microscope } from "lucide-react"
 export function Footer() {
   return (
     <footer className="border-t bg-white">
-      <div className="container flex flex-col gap-4 py-6 md:flex-row md:gap-6 px-4 md:px-6">
+      <div className="container max-w-7xl mx-auto flex flex-col gap-4 py-8 md:py-10 md:flex-row md:gap-6 px-4 md:px-6">
         <div className="flex flex-col gap-2 md:gap-3 md:w-1/3">
           <Link href="/" className="flex items-center gap-2">
             <Microscope className="h-4 w-4 text-teal-600" />
@@ -48,7 +48,7 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t py-4 text-center text-xs text-gray-500 font-light">
-        <div className="container px-4 md:px-6">
+        <div className="container max-w-7xl mx-auto px-4 md:px-6">
           © {new Date().getFullYear()} PCC1.news. All rights reserved.
         </div>
       </div>

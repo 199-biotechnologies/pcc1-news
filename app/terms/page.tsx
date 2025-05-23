@@ -7,7 +7,7 @@ export default function TermsPage() {
         <PageHeader 
           title="Terms of Service"
           description={
-            <span className="text-xs text-gray-500 font-light">
+            <span className="text-xs text-gray-600 font-light">
               Effective date: 4 May 2025 – Last updated: 4 May 2025
             </span>
           }

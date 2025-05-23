@@ -22,9 +22,9 @@ export default function SciencePage() {
       </Section>
 
         {/* What is PCC1 Section */}
-        <Section className="py-12 md:py-16">
-            <article className="prose prose-lg prose-gray max-w-3xl mx-auto dark:prose-invert prose-p:font-light prose-headings:font-light">
-              <h2 className="text-2xl font-extralight tracking-tight sm:text-3xl">What is Procyanidin C1?</h2>
+        <Section>
+            <div className="max-w-3xl mx-auto space-y-6">
+              <h2 className="text-2xl font-extralight tracking-tight sm:text-3xl text-center mb-8">What is Procyanidin C1?</h2>
               <p>
                 Procyanidin C1 (PCC1) is a natural polyphenolic compound classified as a B-type proanthocyanidin. It's specifically a trimer consisting of three epicatechin molecules linked together (epicatechin-(4β-8)-epicatechin-(4β-8)-epicatechin). As a member of the flavonoid superfamily, PCC1 has a complex molecular structure (C<sub>45</sub>H<sub>38</sub>O<sub>18</sub>) that contributes to its unique biological properties.
               </p>
@@ -64,14 +64,14 @@ export default function SciencePage() {
               <p>
                 This dual functionality gives PCC1 an advantage over many other senotherapeutic compounds that typically only target one of these pathways. The ability to both modify and eliminate senescent cells allows for a more comprehensive approach to addressing age-related cellular damage.
               </p>
-            </article>
+            </div>
         </Section>
 
         {/* Molecular Mechanisms Section */}
         <Section background="light" className="py-12 md:py-16">
             <div className="max-w-3xl mx-auto space-y-6">
               <h2 className="text-2xl font-extralight tracking-tight sm:text-3xl text-center">Molecular Mechanisms</h2>
-              <p className="text-gray-500 text-sm md:text-base font-light text-center">
+              <p className="text-gray-600 text-sm md:text-base font-light text-center">
                 PCC1 affects multiple cellular pathways to target senescent cells
               </p>
               
@@ -81,7 +81,7 @@ export default function SciencePage() {
                     <Target className="h-5 w-5" />
                   </div>
                   <h3 className="text-lg font-light text-center">Selective Targeting</h3>
-                  <p className="text-sm text-gray-500 text-center font-light">
+                  <p className="text-sm text-gray-600 text-center font-light">
                     Targets senescent cells' depolarized plasma membranes and elevated H+ concentrations, making them more susceptible to PCC1 action than healthy cells.
                   </p>
                 </div>
@@ -91,7 +91,7 @@ export default function SciencePage() {
                     <Beaker className="h-5 w-5" />
                   </div>
                   <h3 className="text-lg font-light text-center">Mitochondrial Pathway</h3>
-                  <p className="text-sm text-gray-500 text-center font-light">
+                  <p className="text-sm text-gray-600 text-center font-light">
                     Impairs mitochondrial membrane potential (Δψm) and increases reactive oxygen species (ROS) production in senescent cells, triggering apoptosis.
                   </p>
                 </div>
@@ -101,7 +101,7 @@ export default function SciencePage() {
                     <Microscope className="h-5 w-5" />
                   </div>
                   <h3 className="text-lg font-light text-center">Pro-apoptotic Factors</h3>
-                  <p className="text-sm text-gray-500 text-center font-light">
+                  <p className="text-sm text-gray-600 text-center font-light">
                     Upregulates expression of pro-apoptotic factors NOXA and PUMA, which critically promote senescent cell death.
                   </p>
                 </div>
@@ -111,7 +111,7 @@ export default function SciencePage() {
                     <Leaf className="h-5 w-5" />
                   </div>
                   <h3 className="text-lg font-light text-center">Signaling Pathways</h3>
-                  <p className="text-sm text-gray-500 text-center font-light">
+                  <p className="text-sm text-gray-600 text-center font-light">
                     Modulates AKT kinase, JAK1/2, and p38 MAPK signaling pathways involved in senescent cell maintenance and survival.
                   </p>
                 </div>
@@ -119,10 +119,10 @@ export default function SciencePage() {
               
               <div className="mt-8 bg-white p-6 rounded-lg shadow-sm border">
                 <h3 className="text-lg font-light mb-2">Broad Spectrum Activity</h3>
-                <p className="text-sm text-gray-500 font-light">
+                <p className="text-sm text-gray-600 font-light">
                   Unlike many other senolytic compounds that only work on specific cell types, PCC1 demonstrates efficacy against senescent cells from multiple origins, including:
                 </p>
-                <ul className="mt-3 space-y-1 text-sm text-gray-500 font-light">
+                <ul className="mt-3 space-y-1 text-sm text-gray-600 font-light">
                   <li className="flex items-start gap-2">
                     <span className="text-teal-600 text-lg leading-none">•</span>
                     <span>Human stromal cells and fibroblasts</span>
@@ -140,7 +140,7 @@ export default function SciencePage() {
                     <span>Cells made senescent by various stressors (replication, oncogenes, radiation, chemotherapy)</span>
                   </li>
                 </ul>
-                <p className="mt-3 text-sm text-gray-500 font-light">
+                <p className="mt-3 text-sm text-gray-600 font-light">
                   This broad spectrum activity makes PCC1 especially promising compared to more selective senolytics like fisetin, dasatinib, or ABT-263.
                 </p>
               </div>
@@ -163,7 +163,7 @@ export default function SciencePage() {
                     height={300}
                     className="mx-auto overflow-hidden rounded-lg object-contain border"
                   />
-                  <p className="text-xs text-gray-500 text-center font-light">
+                  <p className="text-xs text-gray-600 text-center font-light">
                     Fig 1a: Survival curves of aged mice (24-27 months old) treated with PCC1 or vehicle control. The blue line represents PCC1-treated mice and shows significantly improved survival compared to controls (black line).
                   </p>
                 </div>
@@ -176,7 +176,7 @@ export default function SciencePage() {
                     height={300}
                     className="mx-auto overflow-hidden rounded-lg object-contain border"
                   />
-                  <p className="text-xs text-gray-500 text-center font-light">
+                  <p className="text-xs text-gray-600 text-center font-light">
                     Fig 1b: Mortality hazard analysis showing 65% reduction in mortality risk with biweekly PCC1 administration compared to the control group.
                   </p>
                 </div>
@@ -185,10 +185,10 @@ export default function SciencePage() {
               {/* Key Finding Text */}
               <div className="space-y-2 pt-4">
                 <h3 className="text-lg font-light">Key Finding:</h3>
-                <p className="text-sm text-gray-500 font-light">
+                <p className="text-sm text-gray-600 font-light">
                   In the landmark 2021 Nature Metabolism study, mice receiving PCC1 administration (once every two weeks) starting at 24–27 months of age (roughly equivalent to 75–90 years in humans) had a 64.2% longer median post-treatment lifespan (or 9.4% longer overall lifespan) and lower mortality hazard (65.0%, P &lt; 0.0001) than the vehicle-treated group, as shown in the figures above.
                 </p>
-                <p className="text-sm text-gray-500 font-light">
+                <p className="text-sm text-gray-600 font-light">
                   This is particularly significant because the intervention was started very late in life and still produced substantial benefits, suggesting that even elderly individuals might benefit from PCC1 administration.
                 </p>
               </div>
@@ -199,17 +199,17 @@ export default function SciencePage() {
         <Section background="light" className="py-12 md:py-16">
             <div className="max-w-3xl mx-auto space-y-6">
               <h2 className="text-2xl font-extralight tracking-tight sm:text-3xl text-center">Tissue-Specific Rejuvenation</h2>
-              <p className="text-gray-500 text-sm md:text-base font-light text-center">
+              <p className="text-gray-600 text-sm md:text-base font-light text-center">
                 Recent research has identified specific tissues and systems that benefit from PCC1 treatment
               </p>
               
               <div className="grid gap-6 md:grid-cols-2 mt-8">
                 <div className="bg-white p-5 rounded-lg shadow-sm border">
                   <h3 className="text-lg font-light mb-3">Retinal Function</h3>
-                  <p className="text-sm text-gray-500 font-light">
+                  <p className="text-sm text-gray-600 font-light">
                     A 2024 PNAS study demonstrated that PCC1 alleviates structural and functional decline in the aged retina. Through high-throughput single-cell RNA sequencing, researchers showed that PCC1 treatment:
                   </p>
-                  <ul className="mt-3 space-y-1 text-sm text-gray-500 font-light">
+                  <ul className="mt-3 space-y-1 text-sm text-gray-600 font-light">
                     <li className="flex items-start gap-2">
                       <span className="text-teal-600 text-lg leading-none">•</span>
                       <span>Reduced accumulation of senescent cells in retinal tissue</span>
@@ -227,10 +227,10 @@ export default function SciencePage() {
                 
                 <div className="bg-white p-5 rounded-lg shadow-sm border">
                   <h3 className="text-lg font-light mb-3">Immune System Rejuvenation</h3>
-                  <p className="text-sm text-gray-500 font-light">
+                  <p className="text-sm text-gray-600 font-light">
                     A 2023 study in npj Aging revealed that long-term PCC1 treatment has geroprotective effects on the hematopoietic and immune system (HIS), including:
                   </p>
-                  <ul className="mt-3 space-y-1 text-sm text-gray-500 font-light">
+                  <ul className="mt-3 space-y-1 text-sm text-gray-600 font-light">
                     <li className="flex items-start gap-2">
                       <span className="text-teal-600 text-lg leading-none">•</span>
                       <span>Increased proportions of B cells and hematopoietic stem cells</span>
@@ -253,10 +253,10 @@ export default function SciencePage() {
               
               <div className="bg-white p-5 rounded-lg shadow-sm border mt-6">
                 <h3 className="text-lg font-light mb-3">Tumor Microenvironment</h3>
-                <p className="text-sm text-gray-500 font-light">
+                <p className="text-sm text-gray-600 font-light">
                   Beyond its direct effects on aging, PCC1 shows promise in cancer treatment by depleting senescent cells in the treatment-damaged tumor microenvironment (TME). Research has shown that PCC1:
                 </p>
-                <ul className="mt-3 space-y-1 text-sm text-gray-500 font-light">
+                <ul className="mt-3 space-y-1 text-sm text-gray-600 font-light">
                   <li className="flex items-start gap-2">
                     <span className="text-teal-600 text-lg leading-none">•</span>
                     <span>Enhances therapeutic efficacy when combined with chemotherapy in preclinical assays</span>
@@ -278,21 +278,21 @@ export default function SciencePage() {
         <Section className="py-12 md:py-16">
             <div className="max-w-3xl mx-auto space-y-6">
               <h2 className="text-2xl font-extralight tracking-tight sm:text-3xl text-center">Human-Relevant Research & Bioavailability</h2>
-              <p className="text-gray-500 text-sm md:text-base font-light text-center">
+              <p className="text-gray-600 text-sm md:text-base font-light text-center">
                 Unlike many experimental compounds, procyanidins have a long history of human consumption and safety studies.
               </p>
               
               <div className="space-y-4 mt-6">
                 <h3 className="text-lg font-light">Natural Sources & Safety Profile</h3>
-                <p className="text-sm text-gray-500 font-light">
+                <p className="text-sm text-gray-600 font-light">
                   Procyanidin C1 is naturally present in foods like grape seeds, apples, cocoa, and cinnamon. Procyanidins in general are known to be non-toxic and non-carcinogenic with a long history of human consumption. While direct clinical trials of purified PCC1 in humans are still needed, the compound's presence in common foods suggests a favorable safety profile.
                 </p>
 
                 <h3 className="text-lg font-light pt-4">Bioavailability Considerations</h3>
-                <p className="text-sm text-gray-500 font-light">
+                <p className="text-sm text-gray-600 font-light">
                   One challenge with PCC1 is its bioavailability. As a trimeric procyanidin, its absorption is lower than that of monomeric flavonoids like epicatechin. Studies show that after oral administration:
                 </p>
-                <ul className="space-y-2 text-sm text-gray-500 font-light">
+                <ul className="space-y-2 text-sm text-gray-600 font-light">
                   <li className="flex items-start gap-2">
                     <span className="text-teal-600 text-lg leading-none">•</span>
                     <span>A portion of PCC1 can be absorbed from the small intestine</span>
@@ -306,7 +306,7 @@ export default function SciencePage() {
                     <span>In tissues, PCC1 distributes widely, primarily in its free form</span>
                   </li>
                 </ul>
-                <p className="text-sm text-gray-500 font-light pt-2">
+                <p className="text-sm text-gray-600 font-light pt-2">
                   Future pharmaceutical development may focus on enhancing PCC1 delivery systems to improve its bioavailability and efficacy in humans.
                 </p>
               </div>
@@ -343,12 +343,12 @@ export default function SciencePage() {
         <Section background="light" className="py-12 md:py-16">
             <div className="max-w-3xl mx-auto space-y-6">
               <h2 className="text-2xl font-extralight tracking-tight sm:text-3xl text-center">Future Research Directions</h2>
-              <p className="text-gray-500 text-sm md:text-base font-light text-center">
+              <p className="text-gray-600 text-sm md:text-base font-light text-center">
                 While PCC1 shows remarkable promise as a senotherapeutic agent, several areas of research are still developing:
               </p>
               
               <div className="bg-white p-6 rounded-lg shadow-sm border mt-6">
-                <ol className="space-y-4 text-sm text-gray-500 font-light list-decimal pl-5">
+                <ol className="space-y-4 text-sm text-gray-600 font-light list-decimal pl-5">
                   <li>
                     <span className="font-medium text-gray-700">Human Clinical Trials:</span> Initial clinical trials to establish safety, dosage, and efficacy of PCC1 in humans are a critical next step.
                   </li>
@@ -365,7 +365,7 @@ export default function SciencePage() {
                     <span className="font-medium text-gray-700">Disease-Specific Applications:</span> Investigating PCC1's potential in specific age-related diseases like Alzheimer's, cardiovascular disease, and diabetes.
                   </li>
                 </ol>
-                <p className="mt-4 text-sm text-gray-500 font-light">
+                <p className="mt-4 text-sm text-gray-600 font-light">
                   Given that procyanidins have a long history of use in clinics and their side effects can be monitored and managed, researchers are optimistic that PCC1 could be successfully developed as a novel senolytic agent for clinical applications.
                 </p>
               </div>

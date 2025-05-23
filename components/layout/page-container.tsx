@@ -7,7 +7,7 @@ interface PageContainerProps {
 
 export function PageContainer({ children, className = '' }: PageContainerProps) {
   return (
-    <main className="flex-1">
+    <main className={`flex-1 min-h-full ${className}`}>
       {children}
     </main>
   )
@@ -30,8 +30,8 @@ export function Section({
     '';
 
   return (
-    <section className={`w-full py-8 md:py-12 ${bgClass} ${className}`}>
-      <div className="container px-4 md:px-6 mx-auto">
+    <section className={`w-full py-12 md:py-16 lg:py-20 ${bgClass} ${className}`}>
+      <div className="container max-w-7xl px-4 md:px-6 mx-auto">
         {children}
       </div>
     </section>

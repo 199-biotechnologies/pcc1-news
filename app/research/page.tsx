@@ -60,10 +60,10 @@ export default async function ResearchPage() {
                       {paper.volume && `, ${paper.volume}`}
                       {paper.pages && `, ${paper.pages}`}
                     </p>
-                    {paper.description && <p className="text-sm text-gray-500 font-light">{paper.description}</p>}
+                    {paper.description && <p className="text-sm text-gray-600 font-light">{paper.description}</p>}
                     {paper.doi && (
                       <div className="flex items-center justify-between pt-2">
-                        <p className="text-sm text-gray-500 font-light">DOI: {paper.doi}</p>
+                        <p className="text-sm text-gray-600 font-light">DOI: {paper.doi}</p>
                         <Link
                           href={`https://doi.org/${paper.doi}`}
                           className="text-teal-600 text-sm font-light hover:underline flex items-center"
@@ -79,7 +79,7 @@ export default async function ResearchPage() {
               </div>
             ))
           ) : (
-            <p className="text-center text-gray-500">No research papers found.</p>
+            <p className="text-center text-gray-600">No research papers found.</p>
           )}
         </div>
       </Section>
@@ -88,7 +88,7 @@ export default async function ResearchPage() {
         <div className="flex flex-col items-center justify-center space-y-3 text-center">
           <div className="space-y-2">
             <h2 className="text-2xl font-extralight tracking-tight sm:text-3xl">Explore More</h2>
-            <p className="mx-auto max-w-[500px] text-gray-500 text-sm md:text-base font-light">
+            <p className="mx-auto max-w-[500px] text-gray-600 text-sm md:text-base font-light">
               Discover our blog for more insights on Procyanidin C1 research and applications.
             </p>
           </div>

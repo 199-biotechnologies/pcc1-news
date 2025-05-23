@@ -61,7 +61,7 @@ export default async function ShopPage() {
         <Section background="gradient">
           <div className="flex flex-col items-center justify-center text-center">
             <h1 className="text-2xl font-semibold text-red-600">Error Loading Product</h1>
-            <p className="text-gray-500 mt-2">
+            <p className="text-gray-600 mt-2">
               We couldn't retrieve the product information at this time. Please try again later or contact support.
             </p>
           </div>
@@ -120,7 +120,7 @@ export default async function ShopPage() {
         <div className="flex flex-col items-center justify-center space-y-3 text-center">
           <div className="space-y-2">
             <h2 className="text-2xl font-extralight tracking-tight sm:text-3xl">The Science Behind {product.name}</h2>
-            <p className="mx-auto max-w-[700px] text-gray-500 text-sm md:text-base font-light">
+            <p className="mx-auto max-w-[700px] text-gray-600 text-sm md:text-base font-light">
               Understanding how {product.name} supports cellular health
             </p>
           </div>
@@ -129,21 +129,21 @@ export default async function ShopPage() {
         <div className="mx-auto grid max-w-5xl gap-6 py-8 md:grid-cols-2 lg:grid-cols-3">
           <div className="rounded-lg border bg-white p-4 shadow-sm">
             <h3 className="mb-2 text-lg font-light">Senolytic Activity</h3>
-            <p className="text-sm text-gray-500 font-light">
+            <p className="text-sm text-gray-600 font-light">
               Selectively eliminates senescent cells (aging "zombie" cells) through programmed cell death while
               sparing healthy cells, helping to remove harmful cells that secrete inflammatory compounds.
             </p>
           </div>
           <div className="rounded-lg border bg-white p-4 shadow-sm">
             <h3 className="mb-2 text-lg font-light">Senomorphic Effects</h3>
-            <p className="text-sm text-gray-500 font-light">
+            <p className="text-sm text-gray-600 font-light">
               Beyond eliminating senescent cells, modifies their behavior to reduce harmful inflammatory
               signals (SASP), decreasing their negative impact on surrounding tissues.
             </p>
           </div>
           <div className="rounded-lg border bg-white p-4 shadow-sm">
             <h3 className="mb-2 text-lg font-light">Antioxidant Properties</h3>
-            <p className="text-sm text-gray-500 font-light">
+            <p className="text-sm text-gray-600 font-light">
               Exhibits potent antioxidant properties that help combat oxidative stress, a key
               factor in cellular aging and tissue damage.
             </p>
@@ -171,21 +171,21 @@ export default async function ShopPage() {
           <div className="space-y-4">
             <div className="rounded-lg border bg-white p-4">
               <h3 className="text-lg font-light">What is {product.name}?</h3>
-              <p className="mt-1 text-sm text-gray-500 font-light">
+              <p className="mt-1 text-sm text-gray-600 font-light">
                 {product.name} is a specific type of compound identified in research.
                 Our formula contains a highly purified form.
               </p>
             </div>
             <div className="rounded-lg border bg-white p-4">
               <h3 className="text-lg font-light">How does it work?</h3>
-              <p className="mt-1 text-sm text-gray-500 font-light">
+              <p className="mt-1 text-sm text-gray-600 font-light">
                 It works through senolytic and senomorphic mechanisms, selectively eliminating senescent
                 cells while also modifying their behavior to reduce harmful inflammatory signals.
               </p>
             </div>
             <div className="rounded-lg border bg-white p-4">
               <h3 className="text-lg font-light">What is the recommended dosage?</h3>
-              <p className="mt-1 text-sm text-gray-500 font-light">
+              <p className="mt-1 text-sm text-gray-600 font-light">
                 The recommended dosage is typically 1-2 capsules daily, preferably with a meal. Each bottle contains a 30-day supply.
               </p>
             </div>
@@ -200,7 +200,7 @@ export default async function ShopPage() {
         <div className="flex flex-col items-center justify-center space-y-3 text-center">
           <div className="space-y-2">
             <h2 className="text-2xl font-extralight tracking-tight sm:text-3xl">Subscribe & Save</h2>
-            <p className="mx-auto max-w-[500px] text-gray-500 text-sm md:text-base font-light">
+            <p className="mx-auto max-w-[500px] text-gray-600 text-sm md:text-base font-light">
               Get 15% off your first order when you subscribe to our newsletter
             </p>
           </div>
@@ -215,7 +215,7 @@ export default async function ShopPage() {
                 Subscribe
               </Button>
             </form>
-            <p className="text-xs text-gray-500 font-light">
+            <p className="text-xs text-gray-600 font-light">
               We respect your privacy. Unsubscribe at any time. Discount code will be sent to your email.
             </p>
           </div>

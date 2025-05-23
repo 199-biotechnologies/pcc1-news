@@ -68,7 +68,7 @@ export default async function PostPage({ params }: PostPageProps) {
                 <PageHeader
                     title={blogPost.title}
                     description={
-                        <div className="flex justify-center items-center gap-4 text-xs text-gray-500 font-light">
+                        <div className="flex justify-center items-center gap-4 text-xs text-gray-600 font-light">
                             {blogPost.published_at && (
                                 <div className="flex items-center gap-1">
                                     <Calendar className="h-3 w-3" />

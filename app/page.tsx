@@ -16,7 +16,7 @@ export default function Home() {
             <h1 className="text-3xl font-extralight tracking-tight sm:text-4xl md:text-5xl">
               Unlocking the Power of Procyanidin C1
             </h1>
-            <p className="text-gray-500 md:text-lg/relaxed font-light">
+            <p className="text-gray-600 md:text-lg/relaxed font-light">
               Exploring the senolytic complex that extends lifespan and combats cellular aging.
             </p>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
@@ -47,7 +47,7 @@ export default function Home() {
         <div className="flex flex-col items-center justify-center space-y-3 text-center">
           <div className="space-y-2">
             <h2 className="text-2xl font-extralight tracking-tight sm:text-3xl">The Science of PCC1</h2>
-            <p className="mx-auto max-w-[700px] text-gray-500 text-sm md:text-base font-light">
+            <p className="mx-auto max-w-[700px] text-gray-600 text-sm md:text-base font-light">
               Procyanidin C1 is a trimeric procyanidin with remarkable senolytic and senomorphic properties.
             </p>
           </div>
@@ -58,7 +58,7 @@ export default function Home() {
               <Microscope className="h-5 w-5" />
             </div>
             <h3 className="text-lg font-light text-center">Senolytic Activity</h3>
-            <p className="text-sm text-gray-500 text-center font-light">
+            <p className="text-sm text-gray-600 text-center font-light">
               Selectively eliminates senescent "zombie" cells while sparing healthy cells, reducing harmful
               inflammatory compounds.
             </p>
@@ -68,7 +68,7 @@ export default function Home() {
               <BookOpen className="h-5 w-5" />
             </div>
             <h3 className="text-lg font-light text-center">Senomorphic Effects</h3>
-            <p className="text-sm text-gray-500 text-center font-light">
+            <p className="text-sm text-gray-600 text-center font-light">
               Modifies senescent cell behavior to reduce harmful inflammatory signals (SASP), decreasing negative
               impact on tissues.
             </p>
@@ -78,7 +78,7 @@ export default function Home() {
               <Users className="h-5 w-5" />
             </div>
             <h3 className="text-lg font-light text-center">Lifespan Extension</h3>
-            <p className="text-sm text-gray-500 text-center font-light">
+            <p className="text-sm text-gray-600 text-center font-light">
               Research shows PCC1 extended median post-treatment lifespan by 64.2% in aged mice, equivalent to
               humans 75-90 years old.
             </p>
@@ -94,10 +94,10 @@ export default function Home() {
               Key Research
             </div>
             <h2 className="text-2xl font-extralight tracking-tight sm:text-3xl">Mechanism of Action</h2>
-            <p className="text-gray-500 text-sm md:text-base font-light">
+            <p className="text-gray-600 text-sm md:text-base font-light">
               PCC1 works through several biological pathways to support cellular health:
             </p>
-            <ul className="space-y-2 text-sm text-gray-500 font-light">
+            <ul className="space-y-2 text-sm text-gray-600 font-light">
               <li className="flex items-start gap-2">
                 <span className="text-teal-600 text-lg leading-none">•</span>
                 <span>Inhibition of PI3K/AKT pathway in senescent cells</span>
@@ -130,7 +130,7 @@ export default function Home() {
         <div className="flex flex-col items-center justify-center space-y-3 text-center">
           <div className="space-y-2">
             <h2 className="text-2xl font-extralight tracking-tight sm:text-3xl">Recent Research</h2>
-            <p className="mx-auto max-w-[700px] text-gray-500 text-sm md:text-base font-light">
+            <p className="mx-auto max-w-[700px] text-gray-600 text-sm md:text-base font-light">
               The latest studies exploring Procyanidin C1's effects on aging and age-related conditions.
             </p>
           </div>
@@ -139,9 +139,9 @@ export default function Home() {
           <div className="group relative overflow-hidden rounded-lg border bg-white shadow-sm transition-all hover:shadow-md">
             <Link href="/blog/retinal-function" className="absolute inset-0 z-10" />
             <div className="p-4">
-              <div className="mb-3 text-xs text-gray-500 font-light">February 20, 2024</div>
+              <div className="mb-3 text-xs text-gray-600 font-light">February 20, 2024</div>
               <h3 className="mb-2 text-lg font-light">PCC1 Rejuvenates Retinal Function in Aging Mice</h3>
-              <p className="mb-3 text-sm text-gray-500 font-light">
+              <p className="mb-3 text-sm text-gray-600 font-light">
                 Recent PNAS study shows PCC1 can rejuvenate retinal function by targeting senescent cells in the
                 retina.
               </p>
@@ -153,9 +153,9 @@ export default function Home() {
           <div className="group relative overflow-hidden rounded-lg border bg-white shadow-sm transition-all hover:shadow-md">
             <Link href="/blog/pulmonary-fibrosis" className="absolute inset-0 z-10" />
             <div className="p-4">
-              <div className="mb-3 text-xs text-gray-500 font-light">January 15, 2024</div>
+              <div className="mb-3 text-xs text-gray-600 font-light">January 15, 2024</div>
               <h3 className="mb-2 text-lg font-light">PCC1 Attenuates Pulmonary Fibrosis</h3>
-              <p className="mb-3 text-sm text-gray-500 font-light">
+              <p className="mb-3 text-sm text-gray-600 font-light">
                 FASEB Journal research demonstrates PCC1's ability to reduce pulmonary fibrosis by eliminating
                 senescent cells.
               </p>
@@ -167,9 +167,9 @@ export default function Home() {
           <div className="group relative overflow-hidden rounded-lg border bg-white shadow-sm transition-all hover:shadow-md">
             <Link href="/blog/nature-metabolism-study" className="absolute inset-0 z-10" />
             <div className="p-4">
-              <div className="mb-3 text-xs text-gray-500 font-light">December 10, 2021</div>
+              <div className="mb-3 text-xs text-gray-600 font-light">December 10, 2021</div>
               <h3 className="mb-2 text-lg font-light">Landmark Study: PCC1 Increases Lifespan in Mice</h3>
-              <p className="mb-3 text-sm text-gray-500 font-light">
+              <p className="mb-3 text-sm text-gray-600 font-light">
                 Nature Metabolism publication demonstrates PCC1's senotherapeutic activity and lifespan extension
                 effects.
               </p>
@@ -190,7 +190,7 @@ export default function Home() {
         <div className="flex flex-col items-center justify-center space-y-3 text-center">
           <div className="space-y-2">
             <h2 className="text-2xl font-extralight tracking-tight sm:text-3xl">Subscribe</h2>
-            <p className="mx-auto max-w-[500px] text-gray-500 text-sm md:text-base font-light">
+            <p className="mx-auto max-w-[500px] text-gray-600 text-sm md:text-base font-light">
               Stay updated with the latest research and insights on Procyanidin C1.
             </p>
           </div>
@@ -205,7 +205,7 @@ export default function Home() {
                 Subscribe
               </Button>
             </form>
-            <p className="text-xs text-gray-500 font-light">We respect your privacy. Unsubscribe at any time.</p>
+            <p className="text-xs text-gray-600 font-light">We respect your privacy. Unsubscribe at any time.</p>
           </div>
         </div>
       </Section>

@@ -7,7 +7,7 @@ export default function PrivacyPage() {
         <PageHeader 
           title="Privacy Policy"
           description={
-            <span className="text-xs text-gray-500 font-light">
+            <span className="text-xs text-gray-600 font-light">
               Effective date: 4 May 2025 – Last updated: 4 May 2025
             </span>
           }
@@ -15,8 +15,9 @@ export default function PrivacyPage() {
       </Section>
 
       <Section>
-        <div className="prose prose-gray max-w-3xl mx-auto dark:prose-invert prose-p:text-sm prose-p:font-light prose-headings:font-light prose-h3:font-light prose-h3:text-lg prose-table:text-sm prose-table:font-light prose-td:p-2 prose-th:p-2 prose-th:font-light">
-          <h3>1 Who we are</h3>
+        <div className="max-w-3xl mx-auto space-y-6 text-gray-600">
+          <div className="space-y-3">
+            <h3 className="text-lg font-light text-gray-900">1 Who we are</h3>
           <p>
             pcc1.news is an online platform that publishes news, commentary and peer-review highlights about procyanidin, and operates a boutique shop offering pcc1 products. The site is owned and run by <strong>199 Longevity Ltd</strong>, a company registered in England and Wales (No. 16267409). For the purposes of the UK GDPR and the EU GDPR, 199 Longevity Ltd is the <strong>Data Controller</strong>.
           </p>
@@ -24,9 +25,12 @@ export default function PrivacyPage() {
             You can reach our Data Protection Office at <a href="mailto:support@pcc1.news">support@pcc1.news</a> or by post to 199 Longevity Ltd, 199 Gloucester Terrace, London W2 6LD, United Kingdom.
           </p>
 
+          </div>
+
           <hr className="my-6" />
 
-          <h3>2 Personal data we collect</h3>
+          <div className="space-y-3">
+            <h3 className="text-lg font-light text-gray-900">2 Personal data we collect</h3>
           <h4>2.1 Data you provide directly</h4>
           <ul>
             <li><strong>Account details</strong> – email address, password (bcrypt-hashed) and display name when you open a site account.</li>
@@ -169,6 +173,7 @@ export default function PrivacyPage() {
           <p>
             For any question or concern about privacy at pcc1.news, write to <a href="mailto:support@pcc1.news">support@pcc1.news</a> or to the Data Protection Office, 199 Longevity Ltd, 199 Gloucester Terrace, London W2 6LD, United Kingdom.
           </p>
+          </div>
         </div>
       </Section>
     </PageContainer>

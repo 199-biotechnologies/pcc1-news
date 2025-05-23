@@ -17,12 +17,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="h-full">
-      <body className="h-full flex flex-col">
+      <body className="min-h-full flex flex-col">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <Header />
-          <div className="flex-1 min-h-0">
+          <main className="flex-1">
             {children}
-          </div>
+          </main>
           <Footer />
         </ThemeProvider>
       </body>

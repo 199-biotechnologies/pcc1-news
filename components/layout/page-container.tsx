@@ -7,9 +7,9 @@ interface PageContainerProps {
 
 export function PageContainer({ children, className = '' }: PageContainerProps) {
   return (
-    <main className={`flex-1 min-h-full ${className}`}>
+    <div className={`flex flex-col min-h-full ${className}`}>
       {children}
-    </main>
+    </div>
   )
 }
 

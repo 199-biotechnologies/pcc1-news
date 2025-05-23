@@ -12,17 +12,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
   typescript: true,
 });
 
-// Helper function to format currency
-function formatCurrency(amount: number | null, currency: string | null): string {
-  if (amount === null || currency === null) {
-    return 'Price unavailable';
-  }
-  // Adjust locale and options as needed for desired formatting
-  return new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: currency.toUpperCase(),
-  }).format(amount / 100); // Stripe amounts are in the smallest currency unit (e.g., cents)
-}
+// Helper function removed - using hardcoded price
 
 // Fetch product and price data from Stripe
 async function getProductData() {
@@ -70,8 +60,8 @@ export default async function ShopPage() {
     );
   }
 
-  // Prepare data for display
-  const formattedPrice = formatCurrency(price.unit_amount, price.currency);
+  // Prepare data for display - hardcode price since Stripe is not configured
+  const formattedPrice = "$129.00";
   // Use Stripe product description if available, otherwise provide a sensible default.
   // Consider managing more detailed descriptions in a CMS or your own database.
   const productDescription = product.description || `Our premium formula delivers a precise dose of ${product.name} extracted from natural sources using advanced purification techniques to ensure maximum potency and bioavailability.`;

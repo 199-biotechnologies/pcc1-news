@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
-import Link from "next/link";
 import { CheckCircle, HeartPulse, ShieldCheck, Activity, TrendingUp, Microscope, Leaf, Beaker, Target } from 'lucide-react';
 import { PageContainer, Section, PageHeader } from "@/components/layout/page-container";
 

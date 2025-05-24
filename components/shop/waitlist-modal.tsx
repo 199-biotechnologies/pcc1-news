@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import { supabase } from "@/lib/supabaseClient";
 import { toast } from "sonner";
@@ -52,6 +52,7 @@ export function WaitlistModal({
   const [hcaptchaToken, setHcaptchaToken] = useState<string | null>(null);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [position, setPosition] = useState<number | null>(null);
+  const [autoCloseTimer, setAutoCloseTimer] = useState<number>(10);
   const captchaRef = useRef<HCaptcha>(null);
 
   const form = useForm<WaitlistFormData>({
@@ -139,10 +140,23 @@ export function WaitlistModal({
     }
   };
 
+  // Auto-close timer effect
+  useEffect(() => {
+    if (isSubmitted && autoCloseTimer > 0) {
+      const timer = setTimeout(() => {
+        setAutoCloseTimer(prev => prev - 1);
+      }, 1000);
+      return () => clearTimeout(timer);
+    } else if (isSubmitted && autoCloseTimer === 0) {
+      onOpenChange(false);
+    }
+  }, [isSubmitted, autoCloseTimer, onOpenChange]);
+
   const resetModal = () => {
     setIsSubmitted(false);
     setHcaptchaToken(null);
     setPosition(null);
+    setAutoCloseTimer(10);
     form.reset();
     captchaRef.current?.resetCaptcha();
   };
@@ -292,6 +306,12 @@ export function WaitlistModal({
             </DialogHeader>
 
             <div className="space-y-4 py-4">
+              <div className="flex justify-center mb-4">
+                <div className="rounded-full bg-green-100 p-3">
+                  <Check className="h-8 w-8 text-green-600" />
+                </div>
+              </div>
+              
               <div className="text-center">
                 <p className="text-lg font-semibold">
                   Position #{position} in line
@@ -310,22 +330,27 @@ export function WaitlistModal({
                 </ul>
               </div>
 
-              <div className="flex gap-2">
-                <Button
-                  variant="outline"
-                  className="flex-1"
-                  onClick={() => onOpenChange(false)}
-                >
-                  Close
-                </Button>
-                <Button
-                  variant="default"
-                  className="flex-1"
-                  onClick={handleShare}
-                >
-                  <Share2 className="mr-2 h-4 w-4" />
-                  Share
-                </Button>
+              <div className="space-y-3">
+                <div className="flex gap-2">
+                  <Button
+                    variant="default"
+                    className="flex-1"
+                    onClick={handleShare}
+                  >
+                    <Share2 className="mr-2 h-4 w-4" />
+                    Share with Friends
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="flex-1"
+                    onClick={() => onOpenChange(false)}
+                  >
+                    Close
+                  </Button>
+                </div>
+                <p className="text-xs text-center text-muted-foreground">
+                  This window will close automatically in {autoCloseTimer} seconds
+                </p>
               </div>
             </div>
           </>

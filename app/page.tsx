@@ -3,6 +3,7 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Microscope, BookOpen, Users, FileText } from "lucide-react"
 import { PageContainer, Section } from "@/components/layout/page-container"
+import { NewsletterSubscribe } from "@/components/newsletter-subscribe"
 import { supabase } from "@/lib/supabaseClient"
 
 // Define the type for a research paper
@@ -271,18 +272,13 @@ export default async function Home() {
               Stay informed with breakthrough discoveries in polyphenol research from 199 Biotechnologies.
             </p>
           </div>
-          <div className="w-full max-w-md space-y-2">
-            <form className="flex flex-col sm:flex-row gap-2">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex h-9 w-full rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
-              />
-              <Button type="submit" size="sm" className="font-light">
-                Subscribe
-              </Button>
-            </form>
-            <p className="text-xs text-gray-600 font-light">We respect your privacy. Unsubscribe at any time.</p>
+          <div className="w-full max-w-md">
+            <NewsletterSubscribe
+              source="homepage-subscribe"
+              successMessage="Welcome to the research community!"
+              showDescription={false}
+            />
+            <p className="text-xs text-gray-600 font-light mt-2">We respect your privacy. Unsubscribe at any time.</p>
           </div>
         </div>
       </Section>

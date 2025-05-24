@@ -244,7 +244,7 @@ export default function SciencePage() {
                 <div className="bg-white p-5 rounded-lg shadow-sm border">
                   <h3 className="text-lg font-light mb-3">Immune System Rejuvenation</h3>
                   <p className="text-sm text-gray-600 font-light">
-                    A 2023 study in npj Aging revealed that long-term PCC1 treatment has geroprotective effects on the hematopoietic and immune system (HIS), including:
+                    A 2025 study in npj Aging revealed that long-term PCC1 treatment has geroprotective effects on the hematopoietic and immune system (HIS), including:
                   </p>
                   <ul className="mt-3 space-y-1 text-sm text-gray-600 font-light">
                     <li className="flex items-start gap-2">

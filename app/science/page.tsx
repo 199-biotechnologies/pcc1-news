@@ -174,7 +174,7 @@ export default function SciencePage() {
                 <div className="space-y-2">
                   <Image
                     src="/pcc1-figure-a.png"
-                    alt="Lifespan curve showing PCC1 vs control group"
+                    alt="Graph showing survival curves of aged mice treated with PCC1 versus control group, demonstrating 64.2% longer median post-treatment lifespan"
                     width={500}
                     height={300}
                     className="mx-auto overflow-hidden rounded-lg object-contain border"
@@ -187,7 +187,7 @@ export default function SciencePage() {
                 <div className="space-y-2">
                   <Image
                     src="/pcc1-figure-b.png"
-                    alt="Mortality hazard graph for PCC1 treatment"
+                    alt="Mortality hazard analysis graph showing 65% reduction in mortality risk with biweekly PCC1 administration in aged mice"
                     width={500}
                     height={300}
                     className="mx-auto overflow-hidden rounded-lg object-contain border"

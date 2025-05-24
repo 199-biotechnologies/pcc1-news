@@ -7,7 +7,8 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    unoptimized: true,
+    domains: ['pcc1.news'],
+    formats: ['image/avif', 'image/webp'],
   },
 }
 

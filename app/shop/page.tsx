@@ -41,6 +41,18 @@ async function getProductData() {
 }
 
 // The main page component - now an async Server Component
+export async function generateMetadata() {
+  return {
+    title: 'Shop Procyanidin Complex | PCC1.news',
+    description: 'Purchase high-quality Procyanidin C1 (PCC1) supplements. Scientifically formulated for cellular health and longevity support.',
+    openGraph: {
+      title: 'Shop Procyanidin Complex',
+      description: 'High-quality Procyanidin C1 supplements backed by scientific research.',
+      type: 'website',
+    },
+  };
+}
+
 export default async function ShopPage() {
   const { product, price } = await getProductData();
 
@@ -68,8 +80,37 @@ export default async function ShopPage() {
   const productDescription = product.description || `Our premium formula delivers a precise dose of ${product.name} extracted from natural sources using advanced purification techniques to ensure maximum potency and bioavailability.`;
   const shortDescription = product.metadata?.short_description || `Advanced ${product.name} formula backed by scientific research`; // Use metadata if available
 
+  // Product structured data
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: product.name,
+    description: productDescription,
+    image: product.images?.[0] || "https://pcc1.news/placeholder.jpg",
+    brand: {
+      "@type": "Brand",
+      name: "199 Biotechnologies"
+    },
+    offers: {
+      "@type": "Offer",
+      price: price.unit_amount ? (price.unit_amount / 100).toFixed(2) : "0",
+      priceCurrency: price.currency?.toUpperCase() || "USD",
+      availability: "https://schema.org/InStock",
+      seller: {
+        "@type": "Organization",
+        name: "199 Biotechnologies"
+      }
+    }
+  };
+
   return (
     <PageContainer>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(productSchema),
+        }}
+      />
       {/* Section 1: Title - Uses dynamic data */}
       <Section background="gradient">
         <PageHeader 

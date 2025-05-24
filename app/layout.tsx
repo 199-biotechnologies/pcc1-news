@@ -101,8 +101,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full">
       <head>
+        <meta name="theme-color" content="#14b8a6" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.png" type="image/png" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
         <script

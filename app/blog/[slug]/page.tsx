@@ -5,6 +5,7 @@ import { Calendar, User } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { PageContainer, Section, PageHeader } from "@/components/layout/page-container";
+import { Metadata } from 'next';
 
 // Define the type for a full blog post
 interface BlogPost {
@@ -38,6 +39,40 @@ function formatDate(dateString: string | null): string {
 interface PostPageProps {
     params: {
         slug: string;
+    };
+}
+
+export async function generateMetadata({ params }: PostPageProps): Promise<Metadata> {
+    const { slug } = params;
+    
+    const { data: post } = await supabase
+        .from('blog_posts')
+        .select('title, excerpt, published_at, author')
+        .eq('slug', slug)
+        .single();
+    
+    if (!post) {
+        return {
+            title: 'Post Not Found | PCC1.news',
+            description: 'The requested blog post could not be found.',
+        };
+    }
+    
+    return {
+        title: `${post.title} | PCC1.news`,
+        description: post.excerpt || `Read about ${post.title} and the latest Procyanidin C1 research.`,
+        openGraph: {
+            title: post.title,
+            description: post.excerpt || undefined,
+            type: 'article',
+            publishedTime: post.published_at || undefined,
+            authors: post.author ? [post.author] : undefined,
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title: post.title,
+            description: post.excerpt || undefined,
+        },
     };
 }
 
@@ -105,6 +140,35 @@ export default async function PostPage({ params }: PostPageProps) {
                     </div>
                 </article>
             </Section>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Article",
+                        "headline": blogPost.title,
+                        "description": blogPost.excerpt || undefined,
+                        "author": {
+                            "@type": "Person",
+                            "name": blogPost.author || "199 Biotechnologies"
+                        },
+                        "datePublished": blogPost.published_at || blogPost.created_at,
+                        "dateModified": blogPost.published_at || blogPost.created_at,
+                        "publisher": {
+                            "@type": "Organization",
+                            "name": "199 Biotechnologies",
+                            "logo": {
+                                "@type": "ImageObject",
+                                "url": "https://pcc1.news/placeholder-logo.png"
+                            }
+                        },
+                        "mainEntityOfPage": {
+                            "@type": "WebPage",
+                            "@id": `https://pcc1.news/blog/${slug}`
+                        }
+                    }),
+                }}
+            />
         </PageContainer>
     );
 }

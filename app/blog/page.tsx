@@ -3,6 +3,7 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Calendar, User, Search } from "lucide-react"
 import { supabase } from "@/lib/supabaseClient"
+import { NewsletterSubscribe } from "@/components/newsletter-subscribe"
 import { PageContainer, Section, PageHeader } from "@/components/layout/page-container"
 
 // Define the type for a blog post preview based on the Supabase table columns selected
@@ -124,18 +125,13 @@ export default async function BlogPage() {
               Stay updated with the latest research and insights on Procyanidin C1.
             </p>
           </div>
-          <div className="w-full max-w-md space-y-2">
-            <form className="flex flex-col sm:flex-row gap-2">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex h-9 w-full rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
-              />
-              <Button type="submit" size="sm" className="font-light">
-                Subscribe
-              </Button>
-            </form>
-            <p className="text-xs text-gray-600 font-light">We respect your privacy. Unsubscribe at any time.</p>
+          <div className="w-full max-w-md">
+            <NewsletterSubscribe
+              source="blog-subscribe"
+              successMessage="Thanks for subscribing to our blog updates!"
+              showDescription={false}
+            />
+            <p className="text-xs text-gray-600 font-light mt-2">We respect your privacy. Unsubscribe at any time.</p>
           </div>
         </div>
       </Section>

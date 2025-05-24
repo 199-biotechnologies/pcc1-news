@@ -2,7 +2,8 @@
 
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
-import { Check, Bell, Loader2 } from "lucide-react";
+import { Check, Bell } from "lucide-react";
+import { WaitlistModal } from "./waitlist-modal";
 
 interface ProductCheckoutProps {
   productName: string;
@@ -15,18 +16,8 @@ export default function ProductCheckout({
   productName,
   formattedPrice,
   productDescription,
-  priceId: _priceId // Prefixed with _ to indicate intentionally unused
 }: ProductCheckoutProps) {
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleWaitlist = async () => {
-    setIsLoading(true);
-    // Simulate waitlist signup
-    setTimeout(() => {
-      alert('Thank you for your interest! We\'ll notify you when PCC1 is back in stock.');
-      setIsLoading(false);
-    }, 1000);
-  };
+  const [waitlistModalOpen, setWaitlistModalOpen] = useState(false);
 
   return (
     <div className="space-y-6">
@@ -78,18 +69,21 @@ export default function ProductCheckout({
         <Button
           className="w-full font-light"
           size="lg"
-          onClick={handleWaitlist}
-          disabled={isLoading}
+          onClick={() => setWaitlistModalOpen(true)}
           variant="outline"
         >
-          {isLoading ? (
-            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-          ) : (
-            <Bell className="mr-2 h-4 w-4" />
-          )}
-          {isLoading ? 'Adding to waitlist...' : 'Join Waitlist'}
+          <Bell className="mr-2 h-4 w-4" />
+          Join Waitlist
         </Button>
       </div>
+      
+      {/* Waitlist Modal */}
+      <WaitlistModal
+        open={waitlistModalOpen}
+        onOpenChange={setWaitlistModalOpen}
+        productId="prod_SFtP7VXSpwhZcG"
+        productName={productName}
+      />
       <div className="text-xs text-gray-500 font-light">
         * These statements have not been evaluated by the Food and Drug Administration. This product is not
         intended to diagnose, treat, cure, or prevent any disease.

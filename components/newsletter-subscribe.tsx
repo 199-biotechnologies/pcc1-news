@@ -55,9 +55,9 @@ export function NewsletterSubscribe({
 
       if (error) throw error;
 
-      const result = data as any;
+      const result = data as { success: boolean; message?: string } | null;
       
-      if (result.success) {
+      if (result?.success) {
         setIsSuccess(true);
         setEmail("");
         

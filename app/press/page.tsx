@@ -44,8 +44,8 @@ export default function PressPage() {
 
           <h4>Selected media coverage</h4>
           <ul>
-            <li><strong>Longevity.Technology</strong> – interview: <em>"Yamanaka factors are a biological cheat code"</em> (profile of 199 Biotechnologies and CEO Boris Djordjevic) (<a href="https://longevity.technology/news/yamanaka-factors-are-a-biological-cheat-code/" target="_blank" rel="noopener noreferrer">Longevity Technology</a>)</li>
-            <li><strong>EurekAlert!</strong> – press announcement: <em>"199 Biotechnologies to sponsor ARDD 2024, the world's largest conference on ageing research"</em> (<a href="https://www.eurekalert.org/news-releases/1050907" target="_blank" rel="noopener noreferrer">EurekAlert!</a>)</li>
+            <li><strong>Longevity.Technology</strong> – interview: <em>&ldquo;Yamanaka factors are a biological cheat code&rdquo;</em> (profile of 199 Biotechnologies and CEO Boris Djordjevic) (<a href="https://longevity.technology/news/yamanaka-factors-are-a-biological-cheat-code/" target="_blank" rel="noopener noreferrer">Longevity Technology</a>)</li>
+            <li><strong>EurekAlert!</strong> – press announcement: <em>&ldquo;199 Biotechnologies to sponsor ARDD 2024, the world&apos;s largest conference on ageing research&rdquo;</em> (<a href="https://www.eurekalert.org/news-releases/1050907" target="_blank" rel="noopener noreferrer">EurekAlert!</a>)</li>
             <li><strong>Aging Research & Drug Discovery Meeting (ARDD) – Speakers list 2024</strong> – Boris Djordjevic featured as conference speaker on epigenetic therapeutics (<a href="https://agingpharma.org/speakers2024" target="_blank" rel="noopener noreferrer">ARDD 2025</a>)</li>
             <li><strong>Live Forever Club</strong> – company profile: 199 Biotechnologies recognised as a leading rejuvenation-therapy developer (<a href="https://liveforever.club/resources/199-biotechnologies" target="_blank" rel="noopener noreferrer">Live Forever Club</a>)</li>
           </ul>

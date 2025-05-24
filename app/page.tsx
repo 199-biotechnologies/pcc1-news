@@ -163,7 +163,7 @@ export default async function Home() {
             </div>
             <h3 className="text-lg font-light text-center">Senolytic Activity</h3>
             <p className="text-sm text-gray-600 text-center font-light">
-              Selectively eliminates senescent "zombie" cells while sparing healthy cells, reducing harmful
+              Selectively eliminates senescent &ldquo;zombie&rdquo; cells while sparing healthy cells, reducing harmful
               inflammatory compounds.
             </p>
           </div>
@@ -204,7 +204,7 @@ export default async function Home() {
             <div className="space-y-2">
               <h3 className="text-lg font-light">The Global Aging Challenge</h3>
               <p className="text-sm text-gray-600 font-light">
-                By 2050, 16% of the world's population will be over 65. Age-related diseases cost healthcare systems trillions annually, driven by the accumulation of senescent "zombie" cells that refuse to die and poison surrounding tissue.
+                By 2050, 16% of the world&apos;s population will be over 65. Age-related diseases cost healthcare systems trillions annually, driven by the accumulation of senescent &ldquo;zombie&rdquo; cells that refuse to die and poison surrounding tissue.
               </p>
             </div>
             <div className="space-y-2">
@@ -216,7 +216,7 @@ export default async function Home() {
           </div>
           <div className="space-y-4">
             <div className="space-y-2">
-              <h3 className="text-lg font-light">PCC1: Nature's Solution</h3>
+              <h3 className="text-lg font-light">PCC1: Nature&apos;s Solution</h3>
               <p className="text-sm text-gray-600 font-light">
                 Procyanidin C1 selectively eliminates senescent cells while preserving healthy ones. Found naturally in grape seeds and other plants, it represents a breakthrough in addressing aging at the cellular level.
               </p>

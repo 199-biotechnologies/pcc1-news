@@ -55,7 +55,6 @@ export function Footer() {
             <h4 className="text-sm font-light">Contact</h4>
             <ul className="space-y-1 text-xs">
               <li><Link href="/about" className="text-gray-500 hover:text-gray-900 font-light">About Us</Link></li>
-              {/* <li><Link href="#" className="text-gray-500 hover:text-gray-900 font-light">Contact Us</Link></li> */} {/* Removed for now */}
             </ul>
           </div>
         </div>

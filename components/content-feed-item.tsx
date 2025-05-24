@@ -102,6 +102,10 @@ export function ContentFeedItem({
     </article>
   );
 
+  if (!link) {
+    return <div className="block">{content}</div>;
+  }
+
   if (isExternal) {
     return (
       <a href={link} target="_blank" rel="noopener noreferrer" className="block">

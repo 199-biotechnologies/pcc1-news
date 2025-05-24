@@ -83,8 +83,8 @@ export default async function Home() {
       title: paper.title,
       description: paper.description,
       date: new Date(paper.published_at || paper.created_at),
-      link: paper.doi ? `https://doi.org/${paper.doi}` : '#',
-      isExternal: true,
+      link: paper.doi ? `https://doi.org/${paper.doi}` : '',
+      isExternal: !!paper.doi,
       journal: paper.journal,
     });
   });
@@ -136,9 +136,6 @@ export default async function Home() {
                 <Link href="/shop">
                   Explore Shop <ArrowRight className="ml-2 h-3 w-3" />
                 </Link>
-              </Button>
-              <Button variant="outline" size="sm" className="font-light" asChild>
-                <Link href="#subscribe">Subscribe</Link>
               </Button>
             </div>
           </div>

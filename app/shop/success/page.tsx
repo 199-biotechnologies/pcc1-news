@@ -4,10 +4,6 @@ import { Button } from '@/components/ui/button';
 import { PageContainer, Section, PageHeader } from '@/components/layout/page-container';
 
 export default function SuccessPage() {
-  // TODO: Optionally retrieve session details using the session_id from the URL query parameters
-  // to display more specific order information.
-  // Example: const searchParams = useSearchParams(); const sessionId = searchParams.get('session_id');
-
   return (
     <PageContainer>
       <Section>

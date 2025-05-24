@@ -4,6 +4,16 @@ import { ArrowRight, ShoppingCart } from "lucide-react"
 import { supabase } from "@/lib/supabaseClient"
 import { PageContainer, Section, PageHeader } from "@/components/layout/page-container"
 import ResearchPapersList from "@/components/research/research-papers-list"
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Research | PCC1.news',
+  description: 'Explore peer-reviewed research papers on Procyanidin C1, senescence, and cellular aging from leading scientific journals.',
+  openGraph: {
+    title: 'PCC1 Research Papers',
+    description: 'Scientific research on Procyanidin C1 and cellular aging.',
+  },
+};
 
 // Revalidate every 5 minutes (300 seconds)
 export const revalidate = 300

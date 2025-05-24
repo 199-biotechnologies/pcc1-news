@@ -125,8 +125,11 @@ export default async function Home() {
         <div className="grid gap-6 lg:grid-cols-2 lg:gap-10 items-center">
           <div className="space-y-4">
             <h1 className="text-4xl font-extralight tracking-tight sm:text-5xl xl:text-6xl/none">
-              Decoding Cellular Longevity Through <span className="text-teal-600">Procyanidin C1</span> Research
+              Procyanidin C1 Research & News
             </h1>
+            <p className="text-xl font-extralight text-gray-700">
+              Decoding Cellular Longevity Through Science
+            </p>
             <p className="text-base text-gray-600 sm:text-lg font-light">
               PCC1.news is your source for the latest scientific discoveries about Procyanidin C1, a natural
               compound showing remarkable potential in addressing cellular aging and extending healthspan.

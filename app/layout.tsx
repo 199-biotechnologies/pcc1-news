@@ -48,6 +48,10 @@ export const metadata: Metadata = {
     description: 'The leading source for Procyanidin C1 research, news, and scientific discoveries.',
     images: ['/opengraph-image.jpg']
   },
+  other: {
+    'twitter:site': '@199longevity',
+    'twitter:creator': '@199longevity',
+  },
   robots: {
     index: true,
     follow: true,

@@ -3,6 +3,16 @@ import Link from 'next/link';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mail, Microscope, Hospital, FlaskConical, Pill } from 'lucide-react';
 import { PageContainer, Section, PageHeader } from "@/components/layout/page-container";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About | PCC1.news',
+  description: 'Learn about PCC1.news and the 199 Biotechnologies group. Contact us for research collaborations and inquiries about Procyanidin C1.',
+  openGraph: {
+    title: 'About PCC1.news',
+    description: 'Your independent source for Procyanidin C1 research and the 199 Biotechnologies group.',
+  },
+};
 
 // Data for the 199 Group cards
 const groupEntities = [

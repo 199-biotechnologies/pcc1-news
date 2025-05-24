@@ -1,4 +1,14 @@
 import { PageContainer, Section, PageHeader } from "@/components/layout/page-container";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Press & Media | PCC1.news',
+  description: 'Press information, media coverage, and contact details for journalists covering PCC1.news and 199 Biotechnologies.',
+  openGraph: {
+    title: 'Press & Media Centre',
+    description: 'Official press information for PCC1.news and the 199 group.',
+  },
+};
 
 export default function PressPage() {
   return (

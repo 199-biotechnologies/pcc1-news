@@ -1,4 +1,11 @@
 import { PageContainer, Section, PageHeader } from "@/components/layout/page-container";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy | PCC1.news',
+  description: 'Privacy policy for PCC1.news. Learn how we collect, use, and protect your personal information.',
+  robots: 'noindex, follow',
+};
 
 export default function PrivacyPage() {
   return (

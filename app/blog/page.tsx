@@ -4,6 +4,16 @@ import { ArrowRight, Calendar, User, Search } from "lucide-react"
 import { supabase } from "@/lib/supabaseClient"
 import { NewsletterSubscribe } from "@/components/newsletter-subscribe"
 import { PageContainer, Section, PageHeader } from "@/components/layout/page-container"
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Blog | PCC1.news',
+  description: 'Read the latest articles and insights about Procyanidin C1 research, cellular aging, and longevity science.',
+  openGraph: {
+    title: 'PCC1 Research Blog',
+    description: 'Latest articles on Procyanidin C1 and longevity science.',
+  },
+};
 
 // Define the type for a blog post preview based on the Supabase table columns selected
 interface BlogPostPreview {

@@ -1,8 +1,13 @@
+"use client"
+
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Microscope, ShoppingCart } from "lucide-react"
+import { CurrencySelector } from "@/components/currency-selector"
+import { useCurrency } from "@/components/currency-provider"
 
 export function Header() {
+  const { currency, setCurrency } = useCurrency();
   return (
     <header className="border-b sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container max-w-7xl mx-auto flex h-14 items-center justify-between px-4 md:px-6">
@@ -30,12 +35,15 @@ export function Header() {
             About
           </Link>
         </nav>
-        <Button variant="outline" size="sm" className="font-light hidden sm:flex" asChild>
-          <Link href="/shop">
-            <ShoppingCart className="h-4 w-4 mr-2" />
-            Shop
-          </Link>
-        </Button>
+        <div className="flex items-center gap-3">
+          <CurrencySelector value={currency} onValueChange={setCurrency} />
+          <Button variant="outline" size="sm" className="font-light hidden sm:flex" asChild>
+            <Link href="/shop">
+              <ShoppingCart className="h-4 w-4 mr-2" />
+              Shop
+            </Link>
+          </Button>
+        </div>
       </div>
     </header>
   )

@@ -1,8 +1,7 @@
 import Link from "next/link";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Stripe from 'stripe';
-import ProductCheckout from "@/components/shop/product-checkout";
+import ShopProductDisplay from "@/components/shop/shop-product-display";
 import { PageContainer, Section, PageHeader } from "@/components/layout/page-container";
 
 // Initialize Stripe server-side
@@ -63,8 +62,6 @@ export default async function ShopPage() {
   // Override product name since Stripe is not configured
   product.name = "Procyanidin Complex";
 
-  // Prepare data for display - hardcode price since Stripe is not configured
-  const formattedPrice = "$129.00";
   // Use Stripe product description if available, otherwise provide a sensible default.
   // Consider managing more detailed descriptions in a CMS or your own database.
   const productDescription = product.description || `Our premium formula delivers a precise dose of ${product.name} extracted from natural sources using advanced purification techniques to ensure maximum potency and bioavailability.`;
@@ -82,30 +79,12 @@ export default async function ShopPage() {
 
       {/* Section 2: Product Details & Checkout */}
       <Section>
-        <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-start">
-          {/* Image Gallery - Uses dynamic image */}
-          <div className="space-y-4">
-            <div className="relative overflow-hidden rounded-lg border bg-white">
-              <Image
-                src={product.images?.[0] || "/placeholder.svg"} // Use first image from Stripe or fallback
-                alt={product.name || "Product Image"}
-                width={600}
-                height={600}
-                className="w-full h-auto object-contain"
-                priority // Load main image faster
-              />
-            </div>
-            {/* Removed the grid of 3 small thumbnail images */}
-          </div>
-
-          {/* Product Info & Checkout Button - Render the client component */}
-          <ProductCheckout
-            productName={product.name}
-            formattedPrice={formattedPrice}
-            productDescription={productDescription}
-            priceId={price.id} // Pass priceId needed for checkout
-          />
-        </div>
+        <ShopProductDisplay
+          productName={product.name}
+          productDescription={productDescription}
+          productImage={product.images?.[0]}
+          priceId={price.id}
+        />
       </Section>
 
       {/* Section 3: Science - Update title dynamically */}

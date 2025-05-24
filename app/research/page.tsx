@@ -5,6 +5,9 @@ import { supabase } from "@/lib/supabaseClient"
 import { PageContainer, Section, PageHeader } from "@/components/layout/page-container"
 import ResearchPapersList from "@/components/research/research-papers-list"
 
+// Revalidate every 5 minutes (300 seconds)
+export const revalidate = 300
+
 // Define the type for a research paper based on the Supabase table
 interface ResearchPaper {
   id: number;

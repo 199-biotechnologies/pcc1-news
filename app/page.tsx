@@ -7,6 +7,9 @@ import { NewsletterSubscribe } from "@/components/newsletter-subscribe"
 import { ContentFeedItem, ContentType } from "@/components/content-feed-item"
 import { supabase } from "@/lib/supabaseClient"
 
+// Revalidate every 5 minutes (300 seconds)
+export const revalidate = 300
+
 // Define the type for a research paper
 interface ResearchPaper {
   id: number;

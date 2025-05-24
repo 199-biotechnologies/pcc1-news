@@ -94,7 +94,8 @@ export default function ResearchPapersList({ papers }: ResearchPapersListProps) 
                 {paper.authors && <p className="text-sm text-gray-600 font-light">{paper.authors}</p>}
                 <p className="text-sm font-light">
                   {paper.journal && <span className="italic">{paper.journal}</span>}
-                  {paper.year && `, ${paper.year}`}
+                  {paper.published_at && `, ${new Date(paper.published_at).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}`}
+                  {!paper.published_at && paper.year && `, ${paper.year}`}
                   {paper.volume && `, ${paper.volume}`}
                   {paper.pages && `, ${paper.pages}`}
                 </p>

@@ -4,7 +4,7 @@ import { Resend } from "npm:resend";
 // Configuration from environment variables
 const HCAPTCHA_SECRET_KEY = Deno.env.get("HCAPTCHA_SECRET_KEY");
 const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
-const WAITLIST_EMAIL_SENDER = Deno.env.get("WAITLIST_EMAIL_SENDER");
+const WAITLIST_EMAIL_SENDER = Deno.env.get("CONTACT_EMAIL_SENDER"); // Reuse existing sender
 
 // Helper function to verify hCaptcha token
 async function verifyHCaptcha(token: string): Promise<boolean> {

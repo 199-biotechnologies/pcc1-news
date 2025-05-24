@@ -172,19 +172,19 @@ export default async function ShopPage() {
         {/* Static subscribe section */}
         <div className="flex flex-col items-center justify-center space-y-3 text-center">
           <div className="space-y-2">
-            <h2 className="text-2xl font-extralight tracking-tight sm:text-3xl">Subscribe & Save</h2>
+            <h2 className="text-2xl font-extralight tracking-tight sm:text-3xl">Stay Informed</h2>
             <p className="mx-auto max-w-[500px] text-gray-600 text-sm md:text-base font-light">
-              Get 15% off your first order when you subscribe to our newsletter
+              Subscribe to receive the latest research and updates about Procyanidin C1
             </p>
           </div>
           <div className="w-full max-w-md">
             <NewsletterSubscribe
               source="shop-subscribe-section"
-              successMessage="Welcome! You'll receive a 15% discount code shortly."
+              successMessage="Welcome to our research community!"
               showDescription={false}
             />
             <p className="text-xs text-gray-600 font-light mt-2">
-              We respect your privacy. Unsubscribe at any time. Discount code will be sent to your email.
+              We respect your privacy. Unsubscribe at any time.
             </p>
           </div>
         </div>

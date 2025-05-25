@@ -49,6 +49,11 @@ export async function generateMetadata() {
       title: 'Shop Procyanidin Complex',
       description: 'High-quality Procyanidin C1 supplements backed by scientific research.',
       type: 'website',
+      images: ['/opengraph-image.jpg'],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      images: ['/opengraph-image.jpg'],
     },
   };
 }

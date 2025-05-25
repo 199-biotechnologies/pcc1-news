@@ -12,6 +12,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'PCC1 Research Papers',
     description: 'Scientific research on Procyanidin C1 and cellular aging.',
+    images: ['/opengraph-image.jpg'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/opengraph-image.jpg'],
   },
 };
 

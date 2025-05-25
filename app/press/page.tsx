@@ -7,6 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Press & Media Centre',
     description: 'Official press information for PCC1.news and the 199 group.',
+    images: ['/opengraph-image.jpg'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/opengraph-image.jpg'],
   },
 };
 

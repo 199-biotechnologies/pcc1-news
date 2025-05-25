@@ -12,6 +12,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'PCC1 Research Blog',
     description: 'Latest articles on Procyanidin C1 and longevity science.',
+    images: ['/opengraph-image.jpg'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/opengraph-image.jpg'],
   },
 };
 

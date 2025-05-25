@@ -5,6 +5,11 @@ export const metadata: Metadata = {
   title: 'Privacy Policy | PCC1.news',
   description: 'Privacy policy for PCC1.news. Learn how we collect, use, and protect your personal information.',
   robots: 'noindex, follow',
+  openGraph: {
+    title: 'Privacy Policy',
+    description: 'Privacy policy for PCC1.news.',
+    images: ['/opengraph-image.jpg'],
+  },
 };
 
 export default function PrivacyPage() {

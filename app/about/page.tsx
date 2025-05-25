@@ -11,6 +11,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'About PCC1.news',
     description: 'Your independent source for Procyanidin C1 research and the 199 Biotechnologies group.',
+    images: ['/opengraph-image.jpg'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/opengraph-image.jpg'],
   },
 };
 
@@ -51,7 +56,6 @@ export default function AboutPage() {
           <PageHeader
             title="PCC1.news"
             description="Your independent source for curated news, research summaries, and discussions focused on Procyanidin C1 (PCC1) and its role in healthspan and longevity science. We aim to provide clear, accessible information based on the latest scientific findings."
-            tag="About"
           />
         </div>
       </Section>

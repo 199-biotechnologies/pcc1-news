@@ -67,11 +67,13 @@ export async function generateMetadata({ params }: PostPageProps): Promise<Metad
             type: 'article',
             publishedTime: post.published_at || undefined,
             authors: post.author ? [post.author] : undefined,
+            images: ['/opengraph-image.jpg'],
         },
         twitter: {
             card: 'summary_large_image',
             title: post.title,
             description: post.excerpt || undefined,
+            images: ['/opengraph-image.jpg'],
         },
     };
 }

@@ -5,6 +5,11 @@ export const metadata: Metadata = {
   title: 'Terms of Service | PCC1.news',
   description: 'Terms of Service for PCC1.news. Read our terms and conditions for using our website and services.',
   robots: 'noindex, follow',
+  openGraph: {
+    title: 'Terms of Service',
+    description: 'Terms of Service for PCC1.news.',
+    images: ['/opengraph-image.jpg'],
+  },
 };
 
 export default function TermsPage() {

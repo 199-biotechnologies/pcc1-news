@@ -6,6 +6,15 @@ import { PageContainer, Section, PageHeader } from "@/components/layout/page-con
 export const metadata: Metadata = {
   title: "The Science of PCC1 | PCC1.news",
   description: "A comprehensive overview of the research, mechanisms, and potential of Procyanidin C1 (PCC1) in healthspan and longevity.",
+  openGraph: {
+    title: 'The Science of PCC1',
+    description: 'A comprehensive overview of the research, mechanisms, and potential of Procyanidin C1 in healthspan and longevity.',
+    images: ['/opengraph-image.jpg'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/opengraph-image.jpg'],
+  },
 };
 
 export default function SciencePage() {
@@ -16,7 +25,6 @@ export default function SciencePage() {
         <PageHeader
           title="The Science of Procyanidin C1 (PCC1)"
           description="A comprehensive overview of the research, mechanisms, and potential of PCC1 in healthspan and longevity."
-          tag="Science"
         />
       </Section>
 
